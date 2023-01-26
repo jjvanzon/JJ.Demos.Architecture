@@ -8,21 +8,23 @@ namespace JJ.Demos.Architecture.Business.Cascading
     /// </summary>
     public static class DeleteRelatedEntitiesExtensions
     {
-        private static IOrderProductRepository _orderProductRepository;
+        private static IOrderProductRepository _repository;
         private static IAddressRepository _addressRepository;
 
         public static void DeleteRelatedEntities(this Order order)
         {
-            foreach (OrderProduct orderProduct in order.OrderProducts.ToArray())
+            foreach (var orderProduct in order.OrderProducts.ToArray())
             {
-                orderProduct.UnlinkRelatedEntities();
-                _orderProductRepository.Delete(orderProduct);
+                // Call cascading on the child entity too!
+                orderProduct.UnlinkRelatedEntities(); 
+
+                _repository.Delete(orderProduct);
             }
         }
 
         public static void DeleteRelatedEntities(this Customer customer)
         {
-            foreach (Address address in customer.Addresses.ToArray())
+            foreach (var address in customer.Addresses.ToArray())
             {
                 _addressRepository.Delete(address);
             }
