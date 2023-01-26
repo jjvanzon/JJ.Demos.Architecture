@@ -21,4 +21,20 @@ public static class DeleteRelatedEntitiesExtensions
             _repository.Delete(orderLine);
         }
     }
+
+    /// <summary>
+    /// With repository parameter.
+    /// </summary>
+    public static void DeleteRelatedEntities(
+        this Order order, IOrderLineRepository repository)
+    {
+        // Delete child entities.
+        foreach (var orderLine in order.OrderLines.ToArray())
+        {
+            // Call cascading on the child entity too!
+            orderLine.UnlinkRelatedEntities();
+
+            repository.Delete(orderLine);
+        }
+    }
 }
