@@ -3,7 +3,9 @@ using JJ.Demos.Architecture.Data.RepositoryInterfaces;
 
 namespace JJ.Demos.Architecture.Business.Cascading;
 
-/// <summary> Deletes child entities inherently part of the main entity. </summary>
+/// <summary>
+/// Deletes child entities inherently part of the main entity.
+/// </summary>
 public static class DeleteRelatedEntitiesExtensions
 {
     private static IOrderLineRepository _repository;
