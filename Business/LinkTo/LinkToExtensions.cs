@@ -7,10 +7,10 @@ namespace JJ.Demos.Architecture.Business.LinkTo
         public static void LinkTo(this Order order, Supplier? supplier)
             => throw new NotImplementedException();
 
-        public static void LinkTo(this OrderLine orderProduct, Order? order)
+        public static void LinkTo(this OrderLine orderLine, Order? order)
             => throw new NotImplementedException();
 
-        public static void LinkTo(this OrderLine orderProduct, Product? order)
+        public static void LinkTo(this OrderLine orderLine, Product? order)
             => throw new NotImplementedException();
     }
 }
