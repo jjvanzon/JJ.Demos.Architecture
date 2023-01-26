@@ -1,6 +1,6 @@
 ﻿namespace JJ.Demos.Architecture.Data.Entities
 {
-    public class OrderProduct
+    public class OrderLine
     {
     }
 }

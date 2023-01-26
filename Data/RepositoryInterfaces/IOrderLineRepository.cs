@@ -3,7 +3,7 @@ using JJ.Framework.Data;
 
 namespace JJ.Demos.Architecture.Data.RepositoryInterfaces
 {
-    public interface IOrderProductRepository 
-        : IRepository<OrderProduct, int> 
+    public interface IOrderLineRepository 
+        : IRepository<OrderLine, int> 
     { }
 }

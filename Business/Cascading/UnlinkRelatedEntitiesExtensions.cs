@@ -12,10 +12,10 @@ namespace JJ.Demos.Architecture.Business.Cascading
         public static void UnlinkRelatedEntities(this Order order) 
             => order.UnlinkSupplier();
 
-        public static void UnlinkRelatedEntities(this OrderProduct orderProduct)
+        public static void UnlinkRelatedEntities(this OrderLine orderLine)
         {
-            orderProduct.UnlinkOrder();
-            orderProduct.UnlinkProduct();
+            orderLine.UnlinkOrder();
+            orderLine.UnlinkProduct();
         }
     }
 }
