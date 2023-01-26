@@ -1,4 +1,3 @@
-﻿namespace JJ.Demos.Architecture.Data.Entities
-{
-    public class Product { }
-}
+﻿namespace JJ.Demos.Architecture.Data.Entities;
+
+public class Product { }

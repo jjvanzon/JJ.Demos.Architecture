@@ -1,25 +1,22 @@
 ﻿using JJ.Demos.Architecture.Data.Entities;
 using JJ.Demos.Architecture.Data.RepositoryInterfaces;
 
-namespace JJ.Demos.Architecture.Business.Cascading
+namespace JJ.Demos.Architecture.Business.Cascading;
+
+/// <summary> Deletes child entities inherently part of the main entity. </summary>
+public static class DeleteRelatedEntitiesExtensions
 {
-    /// <summary>
-    /// Deletes child entities inherently part of the main entity.
-    /// </summary>
-    public static class DeleteRelatedEntitiesExtensions
+    private static IOrderLineRepository _repository;
+
+    public static void DeleteRelatedEntities(this Order order)
     {
-        private static IOrderLineRepository _repository;
-
-        public static void DeleteRelatedEntities(this Order order)
+        // Delete child entities.
+        foreach (var orderLine in order.OrderLines.ToArray())
         {
-            // Delete child entities.
-            foreach (var orderLine in order.OrderLines.ToArray())
-            {
-                // Call cascading on the child entity too!
-                orderLine.UnlinkRelatedEntities(); 
+            // Call cascading on the child entity too!
+            orderLine.UnlinkRelatedEntities(); 
 
-                _repository.Delete(orderLine);
-            }
+            _repository.Delete(orderLine);
         }
     }
 }

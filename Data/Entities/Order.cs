@@ -1,9 +1,8 @@
-﻿namespace JJ.Demos.Architecture.Data.Entities
+﻿namespace JJ.Demos.Architecture.Data.Entities;
+
+public class Order
 {
-    public class Order
-    {
-        public virtual Supplier Supplier { get; set; }
-        public virtual IList<OrderLine> OrderLines { get; set; } 
-                 = new List<OrderLine>();
-    }
+    public virtual Supplier Supplier { get; set; }
+    public virtual IList<OrderLine> OrderLines { get; set; } 
+        = new List<OrderLine>();
 }

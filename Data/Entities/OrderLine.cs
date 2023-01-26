@@ -1,6 +1,5 @@
-﻿namespace JJ.Demos.Architecture.Data.Entities
+﻿namespace JJ.Demos.Architecture.Data.Entities;
+
+public class OrderLine
 {
-    public class OrderLine
-    {
-    }
 }
