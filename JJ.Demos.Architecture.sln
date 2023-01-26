@@ -7,12 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		LICENSE.TXT = LICENSE.TXT
+		Archive\Outtakes.cs = Archive\Outtakes.cs
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JJ.Demos.Architecture.Business", "Business\JJ.Demos.Architecture.Business.csproj", "{88055099-2E22-4EA7-BE5D-13C5933233F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Demos.Architecture.Data", "Data\JJ.Demos.Architecture.Data.csproj", "{5933E716-24AB-43CB-9E10-2713E380F23D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JJ.Demos.Architecture.Data", "Data\JJ.Demos.Architecture.Data.csproj", "{5933E716-24AB-43CB-9E10-2713E380F23D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
