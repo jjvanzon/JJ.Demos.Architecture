@@ -2,4 +2,5 @@
 
 public class OrderLine
 {
+    public virtual Product Product { get; set; }
 }

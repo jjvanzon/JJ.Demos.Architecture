@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="RepositoryInterfaces\ICustomerRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="RepositoryInterfaces\ICustomerRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="JJ.Framework.Data" Version="1.7.7818.27888" />
   </ItemGroup>
 
