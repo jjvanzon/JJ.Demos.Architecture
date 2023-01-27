@@ -10,11 +10,7 @@ public abstract class PolymorphicVisitorBase
     {
         VisitPartyPolymorphic(order.Customer);
         VisitPartyPolymorphic(order.Supplier);
-
-        foreach (OrderLine orderLine in order.OrderLines)
-        {
-            VisitOrderLine(orderLine);
-        }
+        VisitOrderLines(order.OrderLines);
     }
 
     protected virtual void VisitPartyPolymorphic(Party party)
@@ -40,6 +36,14 @@ public abstract class PolymorphicVisitorBase
         => VisitPartyBase(customer);
 
     protected virtual void VisitPartyBase(Party party) { }
+
+    protected virtual void VisitOrderLines(IList<OrderLine> orderLines )
+    {
+        foreach (OrderLine orderLine in orderLines)
+        {
+            VisitOrderLine(orderLine);
+        }
+    }
 
     protected virtual void VisitOrderLine(OrderLine orderLine)
         => VisitProductPolymorphic(orderLine.Product);
