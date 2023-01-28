@@ -14,7 +14,7 @@ public class OrderSummaryVisitorTests
         Order order = CreateOrder();
 
         string expected = "1 x Cool gadget" + NewLine +
-                          "2 x Fidget thingies" + NewLine;
+                          "2 x Fidget thing" + NewLine;
         
         string actual = visitor.Execute(order);
 
@@ -38,7 +38,7 @@ public class OrderSummaryVisitorTests
                 Quantity = 2,
                 Product = new Product
                 {
-                    Name = "Fidget thingies"
+                    Name = "Fidget thing"
                 }
             }
         }
