@@ -1,6 +1,7 @@
 ﻿using JJ.Demos.Architecture.Business.Enums;
 using JJ.Demos.Architecture.Data.Entities;
 using JJ.Framework.Exceptions.InvalidValues;
+using JJ.Framework.Exceptions.TypeChecking;
 
 namespace JJ.Demos.Architecture.Business.Visitors;
 
@@ -17,15 +18,15 @@ public abstract class PolymorphicVisitorBase
     {
         switch (party)
         {
-            case Supplier x:
-                VisitSupplier(x);
+            case Supplier supplier:
+                VisitSupplier(supplier);
                 break;
 
-            case Customer x:
-                VisitCustomer(x);
+            case Customer customer:
+                VisitCustomer(customer);
                 break;
 
-            default: throw new ArgumentOutOfRangeException(nameof(party));
+            default: throw new UnexpectedTypeException(() => party);
         }
     }
 
