@@ -3,9 +3,18 @@ using JJ.Demos.Architecture.Data.Entities;
 
 namespace JJ.Demos.Architecture.Business.Visitors;
 
-class SpecializedVisitor : VisitorBase
+class OrderSummaryVisitor : VisitorBase
 {
-    StringBuilder _sb = new();
+    StringBuilder _sb;
+
+    public string Execute(Order order)
+    {
+        _sb = new StringBuilder();
+
+        VisitOrder(order);
+
+        return _sb.ToString();
+    }
 
     protected override void VisitOrderLine(OrderLine orderLine)
     {
@@ -21,5 +30,4 @@ class SpecializedVisitor : VisitorBase
 
         base.VisitProduct(product);
     }
-
 }
