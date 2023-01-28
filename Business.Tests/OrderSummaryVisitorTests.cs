@@ -9,12 +9,12 @@ public class OrderSummaryVisitorTests
     [Fact]
     public void Test_SpecializedVisitor()
     {
-        var visitor = new OrderSummaryVisitor();
+        var visitor = new OrderSummaryVisitor_Step4_EntryPoint();
 
         Order order = CreateOrder();
 
-        string expected = "1 x Cool gadget" + NewLine +
-                          "2 x Fidget thing" + NewLine;
+        string expected = "1 x Cool Gadget" + NewLine +
+                          "2 x Fidget Thing" + NewLine;
         
         string actual = visitor.Execute(order);
 
@@ -30,7 +30,7 @@ public class OrderSummaryVisitorTests
                 Quantity = 1,
                 Product = new Product
                 {
-                    Name = "Cool gadget"
+                    Name = "Cool Gadget"
                 }
             },
             new()
@@ -38,7 +38,7 @@ public class OrderSummaryVisitorTests
                 Quantity = 2,
                 Product = new Product
                 {
-                    Name = "Fidget thing"
+                    Name = "Fidget Thing"
                 }
             }
         }

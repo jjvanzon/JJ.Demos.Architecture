@@ -3,17 +3,22 @@ using JJ.Demos.Architecture.Data.Entities;
 
 namespace JJ.Demos.Architecture.Business.Visitors;
 
-class OrderSummaryVisitor : VisitorBase
+class OrderSummaryVisitor_Step5_Complete : OrderVisitorBase
 {
-    StringBuilder _sb;
+    StringBuilder _sb = new();
 
     public string Execute(Order order)
     {
-        _sb = new StringBuilder();
-
         VisitOrder(order);
-
         return _sb.ToString();
+    }
+
+    protected override void VisitOrder(Order order)
+    {
+        foreach (var orderLine in order.OrderLines)
+        {
+            VisitOrderLine(orderLine);
+        }
     }
 
     protected override void VisitOrderLine(OrderLine orderLine)
