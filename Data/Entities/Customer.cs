@@ -1,5 +1,3 @@
 ﻿namespace JJ.Demos.Architecture.Data.Entities;
- 
-public class Customer : Party
-{
-}
+
+public class Customer : Party { }

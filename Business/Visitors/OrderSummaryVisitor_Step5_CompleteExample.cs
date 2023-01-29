@@ -3,7 +3,7 @@ using JJ.Demos.Architecture.Data.Entities;
 
 namespace JJ.Demos.Architecture.Business.Visitors;
 
-class OrderSummaryVisitor_Step5_Complete : OrderVisitorBase
+class OrderSummaryVisitor_Step5_CompleteExample : OrderVisitorBase
 {
     StringBuilder _sb = new();
 

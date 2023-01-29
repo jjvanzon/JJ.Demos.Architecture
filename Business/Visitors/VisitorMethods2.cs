@@ -2,7 +2,7 @@
 
 namespace JJ.Demos.Architecture.Business.Visitors;
 
-class Visitor2
+class VisitorMethods2
 {
     void VisitOrderLines(IList<OrderLine> orderLines) { }
 }

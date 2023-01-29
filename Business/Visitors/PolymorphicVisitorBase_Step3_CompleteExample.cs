@@ -5,7 +5,7 @@ using JJ.Framework.Exceptions.TypeChecking;
 
 namespace JJ.Demos.Architecture.Business.Visitors;
 
-public abstract class PolymorphicVisitorBase
+abstract class PolymorphicVisitorBase_Step3_CompleteExample
 {
     protected virtual void VisitOrder(Order order)
     {
@@ -38,7 +38,7 @@ public abstract class PolymorphicVisitorBase
 
     protected virtual void VisitPartyBase(Party party) { }
 
-    protected virtual void VisitOrderLines(IList<OrderLine> orderLines )
+    protected virtual void VisitOrderLines(IList<OrderLine> orderLines)
     {
         foreach (OrderLine orderLine in orderLines)
         {

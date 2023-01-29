@@ -2,9 +2,9 @@
 
 namespace JJ.Demos.Architecture.Business.Visitors;
 
-class Visitor3
+class VisitorMethods1
 {
+    void VisitOrder(Order order) { }
+    void VisitOrderLine(OrderLine orderLine) { }
     void VisitProduct(Product product) { }
-    void VisitPhysicalProduct(Product product) { }
-    void VisitDigitalProduct(Product product) { }
 }
