@@ -14,7 +14,7 @@ class OrderSummaryVisitor_Step3_Optimize : OrderVisitorBase
     {
         // Customer and Supplier are skipped here for optimization.
 
-        foreach (var orderLine in order.OrderLines)
+        foreach (var orderLine in order.OrderLines.ToArray())
         {
             VisitOrderLine(orderLine);
         }

@@ -13,14 +13,14 @@ class OrderVisitorBase
         VisitCustomer(order.Customer);
         VisitSupplier(order.Supplier);
 
-        foreach (var orderLine in order.OrderLines)
+        foreach (var orderLine in order.OrderLines.ToArray())
         {
             VisitOrderLine(orderLine);
         }
     }
 
     /// <summary>
-    /// VisitOrderLine also processes its child object Product.
+    /// VisitOrderLine also processes its child object: Product.
     /// </summary>
     protected virtual void VisitOrderLine(OrderLine orderLine)
         => VisitProduct(orderLine.Product);

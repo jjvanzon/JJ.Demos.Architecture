@@ -5,7 +5,7 @@ namespace JJ.Demos.Architecture.Business.Visitors;
 
 /// <summary>
 /// Here the Visit methods are extended,
-/// creating a text that summarizes the order.
+/// creating a text that summarizes the Order.
 /// </summary>
 class OrderSummaryVisitor_Step2_Extend : OrderVisitorBase
 {

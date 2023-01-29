@@ -1,9 +1,8 @@
 ﻿using JJ.Demos.Architecture.Data.Entities;
-using JJ.Framework.Exceptions.TypeChecking;
 
 namespace JJ.Demos.Architecture.Business.Visitors;
 
-public abstract class PolymorphicVisitorBase_Step1_SwitchOnType
+class PolymorphicVisitorBase_Step1_SwitchOnType
 {
     protected virtual void VisitPartyPolymorphic(Party party)
     {

@@ -1,14 +1,13 @@
 ﻿using JJ.Demos.Architecture.Business.Enums;
 using JJ.Demos.Architecture.Data.Entities;
-using JJ.Framework.Exceptions.InvalidValues;
 
 namespace JJ.Demos.Architecture.Business.Visitors;
 
-public abstract class PolymorphicVisitorBase_Step2_SwichOnEnum
+class PolymorphicVisitorBase_Step2_SwichOnEnum
 {
     protected virtual void VisitProductPolymorphic(Product product)
     {
-        ProductTypeEnum productTypeEnum = product.GetProductTypeEnum();
+        var productTypeEnum = product.GetProductTypeEnum();
         switch (productTypeEnum)
         {
             case ProductTypeEnum.Physical:

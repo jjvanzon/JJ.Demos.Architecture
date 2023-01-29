@@ -5,7 +5,7 @@ using JJ.Framework.Exceptions.TypeChecking;
 
 namespace JJ.Demos.Architecture.Business.Visitors;
 
-abstract class PolymorphicVisitorBase_Step3_CompleteExample
+class PolymorphicVisitorBase_Step3_CompleteExample
 {
     protected virtual void VisitOrder(Order order)
     {
@@ -25,8 +25,6 @@ abstract class PolymorphicVisitorBase_Step3_CompleteExample
             case Customer customer:
                 VisitCustomer(customer);
                 break;
-
-            default: throw new UnexpectedTypeException(() => party);
         }
     }
 
@@ -51,7 +49,7 @@ abstract class PolymorphicVisitorBase_Step3_CompleteExample
 
     protected virtual void VisitProductPolymorphic(Product product)
     {
-        ProductTypeEnum productTypeEnum = product.GetProductTypeEnum();
+        var productTypeEnum = product.GetProductTypeEnum();
         switch (productTypeEnum)
         {
             case ProductTypeEnum.Physical:
@@ -61,8 +59,6 @@ abstract class PolymorphicVisitorBase_Step3_CompleteExample
             case ProductTypeEnum.Digital:
                 VisitDigitalProduct(product);
                 break;
-
-            default: throw new ValueNotSupportedException(() => productTypeEnum);
         }
     }
 

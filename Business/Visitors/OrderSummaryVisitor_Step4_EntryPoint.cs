@@ -10,7 +10,7 @@ class OrderSummaryVisitor_Step4_EntryPoint : OrderVisitorBase
     /// <summary>
     /// This Execute method is the only one that's public.
     /// This makes it clear where the process starts.
-    /// The Visit other methods are kept protected
+    /// The Visit methods are kept protected
     /// for internal processing.
     /// </summary>
     public string Execute(Order order)

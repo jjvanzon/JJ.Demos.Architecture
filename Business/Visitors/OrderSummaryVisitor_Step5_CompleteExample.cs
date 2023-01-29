@@ -15,7 +15,7 @@ class OrderSummaryVisitor_Step5_CompleteExample : OrderVisitorBase
 
     protected override void VisitOrder(Order order)
     {
-        foreach (var orderLine in order.OrderLines)
+        foreach (var orderLine in order.OrderLines.ToArray())
         {
             VisitOrderLine(orderLine);
         }
