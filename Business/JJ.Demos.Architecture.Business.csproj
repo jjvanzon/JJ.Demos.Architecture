@@ -8,10 +8,26 @@
 
   <ItemGroup>
     <PackageReference Include="JJ.Framework.Data" Version="1.7.7818.27888" />
+    <PackageReference Include="JJ.Framework.ResourceStrings" Version="1.7.7818.38307" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Data\JJ.Demos.Architecture.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="StringResources\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="StringResources\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
