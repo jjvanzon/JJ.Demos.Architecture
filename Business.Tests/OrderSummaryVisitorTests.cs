@@ -9,7 +9,7 @@ public class OrderSummaryVisitorTests
     [Fact]
     public void Test_SpecializedVisitor()
     {
-        var visitor = new OrderSummaryVisitor_Step4_EntryPoint();
+        var visitor = new OrderSummaryVisitor_Step5_CompleteExample();
 
         Order order = CreateOrder();
 
