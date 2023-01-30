@@ -1,7 +1,4 @@
-﻿using JJ.Demos.Architecture.Data.Entities;
-using JJ.Demos.Architecture.Data.RepositoryInterfaces;
-
-namespace JJ.Demos.Architecture.Business.Cascading;
+﻿namespace JJ.Demos.Architecture.Business.Cascading;
 
 /// <summary>
 /// Deletes child entities inherently part of the main entity.

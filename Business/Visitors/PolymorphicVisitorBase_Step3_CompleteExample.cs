@@ -1,9 +1,4 @@
-﻿using JJ.Demos.Architecture.Business.Enums;
-using JJ.Demos.Architecture.Data.Entities;
-using JJ.Framework.Exceptions.InvalidValues;
-using JJ.Framework.Exceptions.TypeChecking;
-
-namespace JJ.Demos.Architecture.Business.Visitors;
+﻿namespace JJ.Demos.Architecture.Business.Visitors;
 
 class PolymorphicVisitorBase_Step3_CompleteExample
 {

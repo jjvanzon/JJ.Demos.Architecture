@@ -1,8 +1,4 @@
-﻿using JJ.Demos.Architecture.Business.Cascading;
-using JJ.Demos.Architecture.Data.Entities;
-using JJ.Demos.Architecture.Data.RepositoryInterfaces;
-
-namespace JJ.Demos.Architecture.Business;
+﻿namespace JJ.Demos.Architecture.Business;
 
 public class OrderFacade
 {

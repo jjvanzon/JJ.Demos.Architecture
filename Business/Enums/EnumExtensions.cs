@@ -1,7 +1,4 @@
-﻿using JJ.Demos.Architecture.Data.Entities;
-using JJ.Framework.Exceptions.Basic;
-
-namespace JJ.Demos.Architecture.Business.Enums;
+﻿namespace JJ.Demos.Architecture.Business.Enums;
 
 public static class EnumExtensions
 {

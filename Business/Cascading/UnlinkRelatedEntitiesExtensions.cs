@@ -1,7 +1,4 @@
-﻿using JJ.Demos.Architecture.Business.LinkTo;
-using JJ.Demos.Architecture.Data.Entities;
-
-namespace JJ.Demos.Architecture.Business.Cascading;
+﻿namespace JJ.Demos.Architecture.Business.Cascading;
 
 /// <summary>
 /// Unlinks related entities, not inherently part of the main entity.

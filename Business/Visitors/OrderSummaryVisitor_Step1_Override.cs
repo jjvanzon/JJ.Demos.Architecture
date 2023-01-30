@@ -1,6 +1,4 @@
-﻿using JJ.Demos.Architecture.Data.Entities;
-
-namespace JJ.Demos.Architecture.Business.Visitors;
+﻿namespace JJ.Demos.Architecture.Business.Visitors;
 
 /// <summary>
 /// This specialized Visitor only processes

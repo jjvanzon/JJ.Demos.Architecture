@@ -1,7 +1,4 @@
-﻿using System.Text;
-using JJ.Demos.Architecture.Data.Entities;
-
-namespace JJ.Demos.Architecture.Business.Visitors;
+﻿namespace JJ.Demos.Architecture.Business.Visitors;
 
 class OrderSummaryVisitor_Step5_CompleteExample : OrderVisitorBase
 {

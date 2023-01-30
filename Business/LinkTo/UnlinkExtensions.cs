@@ -1,6 +1,4 @@
-﻿using JJ.Demos.Architecture.Data.Entities;
-
-namespace JJ.Demos.Architecture.Business.LinkTo;
+﻿namespace JJ.Demos.Architecture.Business.LinkTo;
 
 public static class UnlinkExtensions
 {

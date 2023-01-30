@@ -1,7 +1,4 @@
-﻿using JJ.Demos.Architecture.Business.Enums;
-using JJ.Demos.Architecture.Data.Entities;
-
-namespace JJ.Demos.Architecture.Business.Visitors;
+﻿namespace JJ.Demos.Architecture.Business.Visitors;
 
 class PolymorphicVisitorBase_Step2_SwichOnEnum
 {

@@ -1,7 +1,4 @@
-﻿using JJ.Demos.Architecture.Business.StringResources;
-using JJ.Framework.Common;
-
-namespace JJ.Demos.Architecture.Business.Tests;
+﻿namespace JJ.Demos.Architecture.Business.Tests;
 
 public class ResourceFormatter2Tests
 {

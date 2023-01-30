@@ -1,6 +1,4 @@
-﻿using JJ.Framework.ResourceStrings;
-
-namespace JJ.Demos.Architecture.Business.StringResources;
+﻿namespace JJ.Demos.Architecture.Business.StringResources;
 
 public static class ResourceFormatter2
 {

@@ -1,5 +1,3 @@
-using JJ.Demos.Architecture.Business.Visitors;
-using JJ.Demos.Architecture.Data.Entities;
 using static System.Environment;
 
 namespace JJ.Demos.Architecture.Business.Tests;

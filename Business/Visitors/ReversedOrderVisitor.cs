@@ -1,5 +1,4 @@
-﻿using JJ.Demos.Architecture.Business.Visitors;
-using JJ.Demos.Architecture.Data.Entities;
+﻿namespace JJ.Demos.Architecture.Business.Visitors;
 
 /// <summary>
 /// This Visitor changes the order of processing.
