@@ -1,6 +1,9 @@
-﻿namespace JJ.Demos.Architecture.Business.Visitors;
+﻿// ReSharper disable once CheckNamespace
 
-class PolymorphicVisitorBase_Step3_CompleteExample
+namespace JJ.Demos.Architecture.Business.Visitors.
+          PolymorphicVisitorBase_Step3_CompleteExample;
+
+class PolymorphicVisitorBase
 {
     protected virtual void VisitOrder(Order order)
     {

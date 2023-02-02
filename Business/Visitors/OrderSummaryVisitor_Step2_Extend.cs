@@ -1,10 +1,13 @@
-﻿namespace JJ.Demos.Architecture.Business.Visitors;
+﻿// ReSharper disable once CheckNamespace
+
+namespace JJ.Demos.Architecture.Business.Visitors.
+          OrderSummaryVisitor_Step2_Extend;
 
 /// <summary>
 /// Here the Visit methods are extended,
 /// creating a text that summarizes the Order.
 /// </summary>
-class OrderSummaryVisitor_Step2_Extend : OrderVisitorBase
+class OrderSummaryVisitor : OrderVisitorBase
 {
     StringBuilder _sb = new();
 

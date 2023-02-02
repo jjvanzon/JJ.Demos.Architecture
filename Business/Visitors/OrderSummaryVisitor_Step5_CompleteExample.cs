@@ -1,6 +1,9 @@
-﻿namespace JJ.Demos.Architecture.Business.Visitors;
+﻿// ReSharper disable once CheckNamespace
 
-class OrderSummaryVisitor_Step5_CompleteExample : OrderVisitorBase
+namespace JJ.Demos.Architecture.Business.Visitors.
+          OrderSummaryVisitor_Step5_CompleteExample;
+
+class OrderSummaryVisitor : OrderVisitorBase
 {
     StringBuilder _sb = new();
 

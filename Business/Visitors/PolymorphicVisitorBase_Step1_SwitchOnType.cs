@@ -1,6 +1,9 @@
-﻿namespace JJ.Demos.Architecture.Business.Visitors;
+﻿// ReSharper disable once CheckNamespace
 
-class PolymorphicVisitorBase_Step1_SwitchOnType
+namespace JJ.Demos.Architecture.Business.Visitors.
+          PolymorphicVisitorBase_Step1_SwitchOnType;
+
+class PolymorphicVisitorBase
 {
     protected virtual void VisitPartyPolymorphic(Party party)
     {

@@ -1,9 +1,12 @@
-﻿namespace JJ.Demos.Architecture.Business.Visitors;
+﻿// ReSharper disable once CheckNamespace
+
+namespace JJ.Demos.Architecture.Business.Visitors.
+          OrderSummaryVisitor_Step3_Optimize;
 
 /// <summary>
 /// This Visitor aims to optimize the recursion.
 /// </summary>
-class OrderSummaryVisitor_Step3_Optimize : OrderVisitorBase
+class OrderSummaryVisitor : OrderVisitorBase
 {
     /// <summary>
     /// Override VisitOrder and leave out part of the recursive process.

@@ -1,6 +1,9 @@
-﻿namespace JJ.Demos.Architecture.Business.Visitors;
+﻿// ReSharper disable once CheckNamespace
 
-class PolymorphicVisitorBase_Step2_SwichOnEnum
+namespace JJ.Demos.Architecture.Business.Visitors.
+          PolymorphicVisitorBase_Step2_SwichOnEnum;
+
+class PolymorphicVisitorBase
 {
     protected virtual void VisitProductPolymorphic(Product product)
     {
