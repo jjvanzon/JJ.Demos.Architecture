@@ -1,4 +1,5 @@
-﻿using JJ.Demos.Architecture.Presentation.ViewModels.Items.ProductViewModel_Step2_Composite;
+﻿using JJ.Demos.Architecture.Presentation.ViewModels.Items.
+      ProductViewModel_Step2_Composite;
 
 namespace JJ.Demos.Architecture.Presentation.ViewModels.Screens.
           ProductEditViewModel_Step3_WithPartials;
