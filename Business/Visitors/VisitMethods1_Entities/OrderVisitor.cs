@@ -1,6 +1,7 @@
-﻿namespace JJ.Demos.Architecture.Business.Visitors;
+﻿namespace JJ.Demos.Architecture.Business.Visitors.
+          VisitMethods1_Entities;
 
-class VisitorMethods1
+class OrderVisitor
 {
     void VisitOrder(Order order) { }
     void VisitOrderLine(OrderLine orderLine) { }

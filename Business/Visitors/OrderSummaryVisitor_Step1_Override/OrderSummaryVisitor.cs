@@ -1,6 +1,4 @@
-﻿// ReSharper disable once CheckNamespace
-
-namespace JJ.Demos.Architecture.Business.Visitors.
+﻿namespace JJ.Demos.Architecture.Business.Visitors.
           OrderSummaryVisitor_Step1_Override;
 
 /// <summary>
@@ -13,6 +11,6 @@ class OrderSummaryVisitor : OrderVisitorBase
     protected override void VisitOrderLine(OrderLine orderLine)
         => base.VisitOrderLine(orderLine);
 
-    protected override void VisitProduct(Product product) 
+    protected override void VisitProduct(Product product)
         => base.VisitProduct(product);
 }

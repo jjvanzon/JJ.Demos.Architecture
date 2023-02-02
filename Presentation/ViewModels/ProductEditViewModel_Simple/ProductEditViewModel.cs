@@ -1,6 +1,4 @@
-﻿// ReSharper disable CheckNamespace
-
-namespace JJ.Demos.Architecture.Presentation.ViewModels.
+﻿namespace JJ.Demos.Architecture.Presentation.ViewModels.
           ProductEditViewModel_Simple;
 
 public class ProductEditViewModel

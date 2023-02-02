@@ -1,6 +1,5 @@
 using JJ.Demos.Architecture.Business.Visitors.
       OrderSummaryVisitor_Step5_CompleteExample;
-using static System.Environment;
 
 namespace JJ.Demos.Architecture.Business.Tests;
 

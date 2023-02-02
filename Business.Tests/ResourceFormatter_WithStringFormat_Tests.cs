@@ -1,6 +1,9 @@
-﻿namespace JJ.Demos.Architecture.Business.Tests;
+﻿using JJ.Demos.Architecture.Business.StringResources.
+      ResourceFormatter_WithStringFormat;
 
-public class ResourceFormatter1Tests
+namespace JJ.Demos.Architecture.Business.Tests;
+
+public class ResourceFormatter_WithStringFormat_Tests
 {
     [Fact]
     public void Test_ResourceFormatter1()
@@ -11,7 +14,7 @@ public class ResourceFormatter1Tests
             CultureHelper.SetCurrentCultureName("en-US");
 
             string expected = "Save Document";
-            string actual = ResourceFormatter1.Save_WithName("Document");
+            string actual = ResourceFormatter.Save_WithName("Document");
             Assert.Equal(expected, actual);
         }
         finally

@@ -1,6 +1,10 @@
-﻿namespace JJ.Demos.Architecture.Presentation.ViewModels;
+﻿using JJ.Demos.Architecture.Presentation.ViewModels.Items.
+      ProductViewModel_Composite;
 
-public class ProductEditViewModel 
+namespace JJ.Demos.Architecture.Presentation.ViewModels.
+          ProductEditViewModel_WithPartials;
+
+public class ProductEditViewModel
 {
     public ButtonBarViewModel Buttons { get; set; }
     public LoginPartialViewModel Login { get; set; }

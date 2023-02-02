@@ -1,6 +1,9 @@
-﻿namespace JJ.Demos.Architecture.Business.Tests;
+﻿using JJ.Demos.Architecture.Business.StringResources.
+      ResourceFormatter_WithHelper;
 
-public class ResourceFormatter2Tests
+namespace JJ.Demos.Architecture.Business.Tests;
+
+public class ResourceFormatter_WithHelper_Tests
 {
     [Fact]
     public void Test_ResourceFormatter2()
@@ -12,13 +15,13 @@ public class ResourceFormatter2Tests
 
             {
                 string expected = "Save";
-                string actual = ResourceFormatter2.Save;
+                string actual = ResourceFormatter.Save;
                 Assert.Equal(expected, actual);
             }
 
             {
                 string expected = "Save Document";
-                string actual = ResourceFormatter2.Save_WithName("Document");
+                string actual = ResourceFormatter.Save_WithName("Document");
                 Assert.Equal(expected, actual);
             }
         }

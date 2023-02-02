@@ -1,6 +1,4 @@
-﻿// ReSharper disable once CheckNamespace
-
-namespace JJ.Demos.Architecture.Business.Visitors.
+﻿namespace JJ.Demos.Architecture.Business.Visitors.
           OrderSummaryVisitor_Step4_EntryPoint;
 
 class OrderSummaryVisitor : OrderVisitorBase

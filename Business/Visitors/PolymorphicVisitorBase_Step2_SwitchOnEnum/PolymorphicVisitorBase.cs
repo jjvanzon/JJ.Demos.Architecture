@@ -1,7 +1,5 @@
-﻿// ReSharper disable once CheckNamespace
-
-namespace JJ.Demos.Architecture.Business.Visitors.
-          PolymorphicVisitorBase_Step2_SwichOnEnum;
+﻿namespace JJ.Demos.Architecture.Business.Visitors.
+          PolymorphicVisitorBase_Step2_SwitchOnEnum;
 
 class PolymorphicVisitorBase
 {
