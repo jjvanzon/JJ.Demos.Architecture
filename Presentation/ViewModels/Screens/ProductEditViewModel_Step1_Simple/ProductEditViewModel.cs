@@ -1,5 +1,5 @@
-﻿namespace JJ.Demos.Architecture.Presentation.ViewModels.
-          ProductEditViewModel_Simple;
+﻿namespace JJ.Demos.Architecture.Presentation.ViewModels.Screens.
+          ProductEditViewModel_Step1_Simple;
 
 public class ProductEditViewModel
 {
