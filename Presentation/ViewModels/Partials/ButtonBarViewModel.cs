@@ -1,7 +1,7 @@
 ﻿namespace JJ.Demos.Architecture.Presentation.ViewModels.Partials;
 
 /// <summary>
-/// PartialViewModel representing a ButtonBar.
+/// Partial ViewModel representing a ButtonBar.
 /// </summary>
 public class ButtonBarViewModel 
 { 

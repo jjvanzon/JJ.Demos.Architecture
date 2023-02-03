@@ -5,13 +5,14 @@ namespace JJ.Demos.Architecture.Presentation.ViewModels.Screens.
           ProductEditViewModel_Step3_WithPartials;
 
 /// <summary>
-/// Screen ViewModel with Partials
+/// Edit ViewModel with Partials
 /// </summary>
 public class ProductEditViewModel
 {
-    // Partials
+    // Partials:
     public ButtonBarViewModel Buttons { get; set; }
     public LoginPartialViewModel Login { get; set; }
+    public PagerViewModel Pager { get; set; }
 
     public ProductViewModel Product { get; set; }
     public bool IsNew { get; set; }

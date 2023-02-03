@@ -1,6 +1,9 @@
 ﻿namespace JJ.Demos.Architecture.Presentation.ViewModels.Screens.
           ProductEditViewModel_Step2_WithRelatedEntities;
 
+/// <summary>
+/// An Edit ViewModel using several Entity ViewModels.
+/// </summary>
 public class ProductEditViewModel
 {
     public int ID { get; set; }

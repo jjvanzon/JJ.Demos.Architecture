@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="JJ.Data.Canonical" Version="1.2.8377.38727" />
     <PackageReference Include="JJ.Framework.Presentation" Version="1.5.6883.36449" />
   </ItemGroup>
 
