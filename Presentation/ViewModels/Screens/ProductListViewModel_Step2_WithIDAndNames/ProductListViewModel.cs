@@ -6,9 +6,6 @@
 /// </summary>
 public class ProductListViewModel
 {
-    public ButtonBarViewModel Buttons { get; set; }
-    public PagerViewModel Pager { get; set; }
-
     // Here, IDAndName is used as a list item.
     public IList<IDAndName> Products { get; set; }
 }

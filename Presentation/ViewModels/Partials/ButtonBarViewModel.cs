@@ -9,5 +9,4 @@ public class ButtonBarViewModel
     public bool CanDelete { get; set; }
     public bool CanCreate { get; set; }
     public bool CanShowList { get; set; }
-    public bool CanGoBack { get; set; }
 }

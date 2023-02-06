@@ -1,5 +1,5 @@
 ﻿namespace JJ.Demos.Architecture.Presentation.ViewModels.Items.
-          ProductViewModel_Step1_Simple;
+          ProductViewModel_Step1_SimpleTypes;
 
 public class ProductViewModel
 {
