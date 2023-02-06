@@ -6,6 +6,6 @@
 /// </summary>
 public class ProductListViewModel
 {
-    // Here, Product ListItemViewModel is used.
-    public IList<ProductListItemViewModel> Products { get; set; }
+    // Here, a ListItem ViewModel is used.
+    public IList<ProductItemViewModel> Products { get; set; }
 }
