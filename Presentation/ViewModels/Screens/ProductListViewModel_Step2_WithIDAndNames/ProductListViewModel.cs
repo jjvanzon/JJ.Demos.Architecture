@@ -8,4 +8,6 @@ public class ProductListViewModel
 {
     // Here, IDAndName is used as a list item.
     public IList<IDAndName> Products { get; set; }
+
+    public PagerViewModel Pager { get; set; }
 }

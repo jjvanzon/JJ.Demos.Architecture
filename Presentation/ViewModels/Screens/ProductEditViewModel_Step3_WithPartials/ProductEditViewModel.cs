@@ -12,5 +12,4 @@ public class ProductEditViewModel
     // Partials:
     public ButtonBarViewModel Buttons { get; set; }
     public LoginPartialViewModel Login { get; set; }
-    public PagerViewModel Pager { get; set; }
 }
