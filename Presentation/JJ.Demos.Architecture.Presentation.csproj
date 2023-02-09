@@ -8,7 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="JJ.Data.Canonical" Version="1.2.8377.38727" />
+    <PackageReference Include="JJ.Framework.Exceptions" Version="1.7.7817.43032" />
     <PackageReference Include="JJ.Framework.Presentation" Version="1.5.6883.36449" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\JJ.Demos.Architecture.Data.csproj" />
   </ItemGroup>
 
 </Project>

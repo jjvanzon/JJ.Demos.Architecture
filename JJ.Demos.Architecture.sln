@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JJ.Demos.Architecture.Archi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JJ.Demos.Architecture.Business.Tests", "Business.Tests\JJ.Demos.Architecture.Business.Tests.csproj", "{C5FC17B8-76BA-487A-B377-C962E7EEB677}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Demos.Architecture.Presentation", "Presentation\JJ.Demos.Architecture.Presentation.csproj", "{BAE601B1-E834-4C3B-98AB-56D66264802D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JJ.Demos.Architecture.Presentation", "Presentation\JJ.Demos.Architecture.Presentation.csproj", "{BAE601B1-E834-4C3B-98AB-56D66264802D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Demos.Architecture.Presentation.Tests", "Presentation.Tests\JJ.Demos.Architecture.Presentation.Tests.csproj", "{44014015-152A-4CF1-85C7-3D1D5217D2C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{BAE601B1-E834-4C3B-98AB-56D66264802D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAE601B1-E834-4C3B-98AB-56D66264802D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAE601B1-E834-4C3B-98AB-56D66264802D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44014015-152A-4CF1-85C7-3D1D5217D2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44014015-152A-4CF1-85C7-3D1D5217D2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44014015-152A-4CF1-85C7-3D1D5217D2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44014015-152A-4CF1-85C7-3D1D5217D2C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

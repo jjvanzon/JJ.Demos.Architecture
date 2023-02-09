@@ -7,4 +7,5 @@ public class Product
     public virtual string Description { get; set; }
     public virtual ProductType ProductType { get; set; }
     public virtual Category Category { get; set; }
+    public IList<Order> Orders { get; set; } = new List<Order>();
 }

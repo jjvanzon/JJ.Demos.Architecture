@@ -5,5 +5,5 @@ public class ProductViewModel
 {
     public int ID { get; set; }
     public string Name { get; set; }
-    public ProductTypeViewModel ProductType { get; set; }
+    public CategoryViewModel Category { get; set; }
 }
