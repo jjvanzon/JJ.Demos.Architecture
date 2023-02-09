@@ -16,7 +16,7 @@ namespace JJ.Demos.Architecture.Presentation.Tests
 
             // Unintentionally, many customers' data
             // is available in the Product view, 
-            // because we referenced an Entity from a ViewModel.
+            // because we referenced an Entity.
             var customers =
                 productViewModel.Category.Products
                                 .SelectMany(x => x.Orders)
