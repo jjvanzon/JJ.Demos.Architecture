@@ -11,14 +11,6 @@ class OrderSummaryVisitor : OrderVisitorBase
         return _sb.ToString();
     }
 
-    protected override void VisitOrder(Order order)
-    {
-        foreach (var orderLine in order.OrderLines.ToArray())
-        {
-            VisitOrderLine(orderLine);
-        }
-    }
-
     protected override void VisitOrderLine(OrderLine orderLine)
     {
         _sb.Append($"{orderLine.Quantity} x ");
