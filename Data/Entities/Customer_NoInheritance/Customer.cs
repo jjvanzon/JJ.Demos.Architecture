@@ -1,6 +1,6 @@
-﻿namespace JJ.Demos.Architecture.Data.Entities;
+﻿namespace JJ.Demos.Architecture.Data.Entities.Customer_NoInheritance;
 
-public class Customer : Party
+public class Customer
 {
     public virtual int ID { get; set; }
     public virtual string Name { get; set; }

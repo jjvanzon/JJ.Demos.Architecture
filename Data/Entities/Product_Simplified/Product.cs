@@ -1,4 +1,4 @@
-﻿namespace JJ.Demos.Architecture.Data.Entities.Simplified;
+﻿namespace JJ.Demos.Architecture.Data.Entities.Product_Simplified;
 
 public class Product
 {
