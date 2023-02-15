@@ -25,4 +25,10 @@
     <ProjectReference Include="..\Presentation\JJ.Demos.Architecture.Presentation.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="xunit.runner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

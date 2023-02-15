@@ -2,7 +2,7 @@ using JJ.Demos.Architecture.Presentation.ViewModels.Items.ProductViewModel_Step4
 
 namespace JJ.Demos.Architecture.Presentation.Tests
 {
-    public class ProductViewModel_Tests
+    public class ProductViewModelTests
     {
         /// <summary>
         /// Linking a ViewModel to an Entity 
