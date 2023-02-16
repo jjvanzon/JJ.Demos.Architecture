@@ -1,5 +1,5 @@
 using JJ.Demos.Architecture.Business.Visitors.
-      OrderSummaryVisitor_Step5_CompleteExample;
+      OrderSummaryVisitor_5_CompleteExample;
 
 namespace JJ.Demos.Architecture.Business.Tests;
 

@@ -1,5 +1,5 @@
 ﻿namespace JJ.Demos.Architecture.Business.Visitors.
-          VisitMethods3_Specialized;
+          VisitMethods_3_Specialized;
 
 class OrderVisitor
 {

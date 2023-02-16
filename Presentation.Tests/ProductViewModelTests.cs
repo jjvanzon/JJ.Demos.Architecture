@@ -1,4 +1,5 @@
-using JJ.Demos.Architecture.Presentation.ViewModels.Items.ProductViewModel_Step4_WithEntity;
+using JJ.Demos.Architecture.Presentation.ViewModels.Items.
+      ProductViewModel_4_WithEntity;
 
 namespace JJ.Demos.Architecture.Presentation.Tests
 {
