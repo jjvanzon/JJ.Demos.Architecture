@@ -1,7 +1,6 @@
 ﻿using JJ.Demos.Architecture.Business.Calculation;
 using JJ.Demos.Architecture.Data.RepositoryInterfaces;
-using JJ.Demos.Architecture.Presentation.ViewModels.Screens.
-      ProductEditViewModel_5_WithVat;
+using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample5_WithVat;
 
 namespace JJ.Demos.Architecture.Presentation.Presenters;
 

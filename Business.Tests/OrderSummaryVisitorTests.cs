@@ -1,5 +1,4 @@
-using JJ.Demos.Architecture.Business.Visitors.
-      OrderSummaryVisitor_5_CompleteExample;
+using JJ.Demos.Architecture.Business.Visitors.OrderSummaryVisitors.Sample5_CompleteExample;
 
 namespace JJ.Demos.Architecture.Business.Tests;
 

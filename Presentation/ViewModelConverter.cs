@@ -1,7 +1,5 @@
-﻿using JJ.Demos.Architecture.Presentation.ViewModels.Items.
-      ProductViewModel_5_WithVat;
-using JJ.Demos.Architecture.Presentation.ViewModels.Screens.
-      ProductEditViewModel_5_WithVat;
+﻿using JJ.Demos.Architecture.Presentation.ViewModels.Items.ProductViewModels.Sample5_WithVat;
+using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample5_WithVat;
 
 namespace JJ.Demos.Architecture.Presentation;
 
