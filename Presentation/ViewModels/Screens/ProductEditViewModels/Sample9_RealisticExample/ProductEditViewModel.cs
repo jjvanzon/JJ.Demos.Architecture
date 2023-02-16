@@ -2,7 +2,7 @@
 
 namespace JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample9_RealisticExample;
 
-/// Screen ViewModel
+// Screen ViewModel
 public class ProductEditViewModel
 {
     // Entity ViewModel

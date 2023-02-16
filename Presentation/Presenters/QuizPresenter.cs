@@ -4,12 +4,11 @@ public class QuizPresenter
 {
     public QuizViewModel Answer(QuizViewModel userInput)
     {
-        var viewModel = new QuizViewModel
-        {
-            // Yield over non-persisted properties.
-            SelectedOption = userInput.SelectedOption,
-            AnswerVisible = userInput.AnswerVisible
-        };
+        var viewModel = new QuizViewModel();
+
+        // Yield over non-persisted properties.
+        viewModel.SelectedOption = userInput.SelectedOption;
+        viewModel.AnswerVisible = userInput.AnswerVisible;
 
         return viewModel;
     }
