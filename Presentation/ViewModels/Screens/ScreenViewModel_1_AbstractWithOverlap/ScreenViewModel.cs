@@ -1,7 +1,7 @@
 ﻿namespace JJ.Demos.Architecture.Presentation.ViewModels.Screens.
-          ScreenViewModelBase_1_WithOverlap;
+          ScreenViewModel_1_AbstractWithOverlap;
 
-public abstract class ScreenViewModelBase
+public abstract class ScreenViewModel
 {
     public string Name { get; set; }
     public string Description { get; set; }

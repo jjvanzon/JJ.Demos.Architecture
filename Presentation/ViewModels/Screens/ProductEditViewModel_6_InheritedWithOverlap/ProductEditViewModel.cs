@@ -1,10 +1,10 @@
 ﻿using JJ.Demos.Architecture.Presentation.ViewModels.Screens.
-      ScreenViewModelBase_1_WithOverlap;
+      ScreenViewModel_1_AbstractWithOverlap;
 
 namespace JJ.Demos.Architecture.Presentation.ViewModels.Screens.
           ProductEditViewModel_6_InheritedWithOverlap;
 
-public class ProductEditViewModel : ScreenViewModelBase
+public class ProductEditViewModel : ScreenViewModel
 {
     // ...
 }

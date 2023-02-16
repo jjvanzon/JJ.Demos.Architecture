@@ -1,7 +1,7 @@
 ﻿namespace JJ.Demos.Architecture.Presentation.ViewModels.Screens.
-          ScreenViewModelBase_2_Clean;
+          ScreenViewModel_2_AbstractClean;
 
-public abstract class ScreenViewModelBase
+public abstract class ScreenViewModel
 {
     public bool Visible { get; set; }
     public bool Successful { get; set; }
