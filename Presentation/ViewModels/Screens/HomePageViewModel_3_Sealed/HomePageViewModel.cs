@@ -1,7 +1,7 @@
 ﻿namespace JJ.Demos.Architecture.Presentation.ViewModels.Screens.
-          HomePageViewModel_Decoupled;
+          HomePageViewModel_3_Sealed;
 
-public class HomePageViewModel
+public sealed class HomePageViewModel
 {
     public string PageTitle { get; set; }
     public string UserDisplayName { get; set; }
