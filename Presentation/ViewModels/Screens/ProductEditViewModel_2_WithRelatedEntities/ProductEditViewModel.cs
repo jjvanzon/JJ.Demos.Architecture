@@ -9,7 +9,7 @@ public class ProductEditViewModel
     public int ID { get; set; }
     public string Name { get; set; }
 
-    // Uses Entity ViewModels
+    // Using Entity ViewModels
     public CategoryViewModel Category { get; set; }
     public ProductTypeViewModel ProductType { get; set; }
 }

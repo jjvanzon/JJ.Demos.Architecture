@@ -7,18 +7,15 @@ namespace JJ.Demos.Architecture.Presentation.Presenters;
 
 class ProductEditPresenter 
 {
-    private IProductRepository _productRepository;
+    private IProductRepository _repository;
     private TaxCalculator _taxCalculator;
 
     public EditViewModel Show(int id)
     {
-        // Data Access
-        Product product = _productRepository.Get(id);
+        Product entity = _repository.Get(id);
 
-        // Business Logic
-        decimal price = product.PriceWithoutVat * _taxCalculator.VatFactor;
+        decimal price = entity.PriceWithoutVat * _taxCalculator.VatFactor;
 
-        // Presentation
         var viewModel = new EditViewModel { Price = price };
 
         return viewModel;
