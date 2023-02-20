@@ -24,25 +24,23 @@ class ProductEditPresenter
 
         // Business
         IValidator validator = new ProductValidator(entity);
-
-        if (!validator.IsValid)
+        if (validator.IsValid)
         {
-            // ToViewModel
-            var viewModel = entity.ToEditViewModel();
+            new SideEffect_SetDateModified(entity).Execute();
 
-            // Non-Persisted Data  
-            viewModel.Validation.Messages = validator.Messages;
+            // Save
+            _repository.Commit();
 
-            return viewModel;
+            // Redirect
+            return new ProductListViewModel();
         }
 
-        // Business
-        new SideEffect_SetDateModified(entity).Execute();
+        // ToViewModel
+        var viewModel = entity.ToEditViewModel();
 
-        // Save
-        _repository.Commit();
+        // Non-Persisted Data  
+        viewModel.Validation.Messages = validator.Messages;
 
-        // Redirect
-        return new ProductListViewModel();
+        return viewModel;
     }
 }
