@@ -3,4 +3,5 @@
 public class ProductType
 {
     public virtual int ID { get; set; }
+    public string Name { get; set; }
 }

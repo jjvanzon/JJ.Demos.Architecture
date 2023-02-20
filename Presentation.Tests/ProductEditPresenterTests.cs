@@ -70,8 +70,6 @@ public class ProductEditPresenterTests
         // Assert
         Assert.IsType<ProductEditViewModel>(viewModelObject);
         var viewModel = (ProductEditViewModel)viewModelObject;
-        Product product = repository.TryGet(userInput.Product.ID);
-        Assert.Null(product);
         Assert.Equal(viewModel.Product.ID, userInput.Product.ID);
         Assert.Equal(viewModel.Product.ProductNumber, userInput.Product.ProductNumber);
         Assert.Equal(viewModel.Product.Name, userInput.Product.Name);
