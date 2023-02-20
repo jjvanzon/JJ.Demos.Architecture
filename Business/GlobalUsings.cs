@@ -6,5 +6,6 @@ global using JJ.Demos.Architecture.Business.Enums;
 global using JJ.Demos.Architecture.Business.LinkTo;
 global using JJ.Demos.Architecture.Data.Entities;
 global using JJ.Demos.Architecture.Data.RepositoryInterfaces;
+global using JJ.Framework.Business;
 global using JJ.Framework.Exceptions.Basic;
 global using JJ.Framework.ResourceStrings;

@@ -1,10 +1,8 @@
-﻿using JJ.Demos.Architecture.Business.Calculation;
-using JJ.Demos.Architecture.Data.RepositoryInterfaces;
-using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample5_WithVat;
+﻿using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample5_WithVat;
 
-namespace JJ.Demos.Architecture.Presentation.Presenters;
+namespace JJ.Demos.Architecture.Presentation.Presenters.ProductEditPresenter.Sample01_AvoidViewModelToViewModel;
 
-class ProductEditPresenter 
+class ProductEditPresenter
 {
     private IProductRepository _repository;
     private TaxCalculator _taxCalculator;

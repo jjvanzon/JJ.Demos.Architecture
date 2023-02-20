@@ -7,6 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Presenters\ProductEditPresenter\Sample03_ViewModelOut\ProductEditPresenter.cs" />
+    <Compile Remove="Presenters\ProductEditPresenter\Sample06_MultipleViewModels\ProductEditPresenter.cs" />
+    <Compile Remove="Presenters\ProductEditPresenter\Sample07_InfraParameters_ToActionMethod\ProductEditPresenter.cs" />
+    <Compile Remove="Presenters\ProductEditPresenter\Sample9_UseToViewModel.cs" />
+    <Compile Remove="Presenters\ProductEditPresenter\Sample09_Using_ToViewModel\ProductEditPresenter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Presenters\ProductEditPresenter\Sample03_ViewModelOut\ProductEditPresenter.cs" />
+    <Content Include="Presenters\ProductEditPresenter\Sample09_Using_ToViewModel\ProductEditPresenter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Presenters\ProductEditPresenter\Sample06_MultipleViewModels\ProductEditPresenter.cs" />
+    <None Include="Presenters\ProductEditPresenter\Sample07_InfraParameters_ToActionMethod\ProductEditPresenter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="JJ.Data.Canonical" Version="1.2.8377.38727" />
     <PackageReference Include="JJ.Framework.Exceptions" Version="1.7.7817.43032" />
     <PackageReference Include="JJ.Framework.Presentation" Version="1.5.6883.36449" />
