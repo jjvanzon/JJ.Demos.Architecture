@@ -1,34 +1,35 @@
-﻿using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample9_RealisticExample;
+﻿using JJ.Demos.Architecture.Business.Services;
+using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample9_RealisticExample;
 using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductListViewModels.Sample2_WithIDAndNames;
 
 namespace JJ.Demos.Architecture.Presentation.Presenters.ProductEditPresenter.Sample10_MultipleResponsibilities;
 
 class ProductEditPresenter
 {
-    private IContext _context;
     private IProductRepository _repository;
+    private IDateTimeProvider _dateTimeProvider;
 
-    public ProductEditPresenter()
+    public ProductEditPresenter(
+        IProductRepository repository, 
+        IDateTimeProvider dateTimeProvider)
     {
-        _context = ContextFactory.CreateContextFromConfiguration();
-        _repository = RepositoryFactory.CreateRepositoryFromConfiguration< IProductRepository>(_context);
+        _dateTimeProvider = dateTimeProvider;
+        _repository = repository;
     }
 
-    public object Save(ProductEditViewModel userInput)
+    public ProductEditViewModel Save(ProductEditViewModel userInput)
     {
-        // Security
-        SecurityAsserter.AssertLogIn();
-
         // ToEntity
         Product entity = userInput.ToEntity(_repository);
 
         // Business
-        new SideEffect_SetDateModified(entity).Execute();
+        new SideEffect_SetDateModified(entity, _dateTimeProvider).Execute();
 
         // Save
         _repository.Commit();
 
-        // Redirect
-        return new ProductListViewModel();
+        // ToViewModel
+        ProductEditViewModel viewModel = entity.ToEditViewModel();
+        return viewModel;
     }
 }

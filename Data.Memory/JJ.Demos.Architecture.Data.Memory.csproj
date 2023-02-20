@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JJ.Framework.Data.Memory" Version="1.7.7817.43034" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\JJ.Demos.Architecture.Data.csproj" />
+  </ItemGroup>
+
+</Project>
