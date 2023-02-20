@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -24,11 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Data.Memory\JJ.Demos.Architecture.Data.Memory.csproj" />
     <ProjectReference Include="..\Presentation\JJ.Demos.Architecture.Presentation.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="App.config">
+    <None Update="testhost.dll.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="xunit.runner.json">
