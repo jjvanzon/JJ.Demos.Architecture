@@ -30,7 +30,7 @@ public class ProductEditPresenterTests
         Product product = repository.Get(userInput.Product.ID);
 
         // Assert SideEffect
-        Assert.Equal(product.DateModified, dateTimeProvider.UtcNow);
+        Assert.Equal(product.DateModified, dateTimeProvider.UtcNow.Date);
 
         throw new NotImplementedException();
     }

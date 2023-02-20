@@ -17,7 +17,8 @@ public static class ToEntityExtensions
         Product product = productRepository.TryGet(viewModel.ID);
         if (product == null)
         {
-            product = productRepository.Create();
+            product = new Product { ID = viewModel.ID };
+            productRepository.Insert(product);
         }
 
         product.ProductNumber = viewModel.ProductNumber;
