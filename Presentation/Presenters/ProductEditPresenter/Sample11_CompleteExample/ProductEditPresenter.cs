@@ -1,7 +1,7 @@
 ﻿using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample9_RealisticExample;
 using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductListViewModels.Sample2_WithIDAndNames;
 
-namespace JJ.Demos.Architecture.Presentation.Presenters.ProductEditPresenter.Sample10_MultipleResponsibilities;
+namespace JJ.Demos.Architecture.Presentation.Presenters.ProductEditPresenter.Sample11_CompleteExample;
 
 class ProductEditPresenter
 {
@@ -21,6 +21,20 @@ class ProductEditPresenter
 
         // ToEntity
         Product entity = userInput.ToEntity(_repository);
+
+        // Business
+        IValidator validator = new ProductValidator(entity);
+
+        if (!validator.IsValid)
+        {
+            // ToViewModel
+            var viewModel = entity.ToEditViewModel();
+
+            // Non-Persisted Data  
+            viewModel.Validation.Messages = validator.Messages;
+
+            return viewModel;
+        }
 
         // Business
         new SideEffect_SetDateModified(entity).Execute();

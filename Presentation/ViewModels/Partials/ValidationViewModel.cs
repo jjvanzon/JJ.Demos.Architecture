@@ -3,5 +3,5 @@
 public class ValidationViewModel
 {
     public bool Successful { get; set; }
-    public IList<string> ValidationMessages { get; set; }
+    public IList<string> Messages { get; set; }
 }

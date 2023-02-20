@@ -10,6 +10,7 @@
     <PackageReference Include="JJ.Framework.Business" Version="1.7.7817.43032" />
     <PackageReference Include="JJ.Framework.Data" Version="1.7.7818.27888" />
     <PackageReference Include="JJ.Framework.ResourceStrings" Version="1.7.7818.38307" />
+    <PackageReference Include="JJ.Framework.Validation" Version="1.7.7817.43035" />
   </ItemGroup>
 
   <ItemGroup>

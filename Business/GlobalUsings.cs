@@ -9,3 +9,4 @@ global using JJ.Demos.Architecture.Data.RepositoryInterfaces;
 global using JJ.Framework.Business;
 global using JJ.Framework.Exceptions.Basic;
 global using JJ.Framework.ResourceStrings;
+global using JJ.Framework.Validation;

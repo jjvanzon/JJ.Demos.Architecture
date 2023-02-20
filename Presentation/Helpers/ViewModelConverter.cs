@@ -1,10 +1,10 @@
 ﻿using JJ.Demos.Architecture.Presentation.ViewModels.Items.ProductViewModels.Sample5_WithVat;
 using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample5_WithVat;
 
-namespace JJ.Demos.Architecture.Presentation;
+namespace JJ.Demos.Architecture.Presentation.Helpers;
 
 static class ViewModelConverter
-{ 
+{
     /// <summary>
     /// Conversion from ViewModel to ViewModel is not recommended.
     /// </summary>
