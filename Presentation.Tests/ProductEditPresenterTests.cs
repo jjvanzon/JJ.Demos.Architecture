@@ -3,7 +3,6 @@ using JJ.Demos.Architecture.Data.RepositoryInterfaces;
 using JJ.Demos.Architecture.Presentation.Presenters.ProductEditPresenter.Sample11_CompleteExample;
 using JJ.Demos.Architecture.Presentation.ViewModels.Items.ProductViewModels.Sample6_RealisticExample;
 using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample9_RealisticExample;
-using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductListViewModels.Sample2_WithIDAndNames;
 using JJ.Framework.Data;
 
 namespace JJ.Demos.Architecture.Presentation.Tests;
