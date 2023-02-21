@@ -53,6 +53,5 @@ public class ProductEditPresenter_MultipleResponsibilities_Tests
 
             Assert.Equal(SideEffect_SetDateModified.FixedDateTime.Date, product.DateModified);
         }
-
     }
 }

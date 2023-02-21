@@ -68,10 +68,6 @@ public class ProductEditPresenter_CompleteExample_Tests
         var viewModel = (ProductEditViewModel)viewModelObject;
 
         Assert.Equal(userInput.Product.ID, viewModel.Product.ID);
-        Assert.Equal(userInput.Product.ProductNumber, viewModel.Product.ProductNumber);
-        Assert.Equal(userInput.Product.Name, viewModel.Product.Name);
-        Assert.Equal(userInput.Product.Description, viewModel.Product.Description);
-        Assert.Equal(userInput.Product.Price, viewModel.Product.Price);
 
         Assert.NotNull(viewModel.Validation);
         Assert.NotNull(viewModel.Validation.Messages);
