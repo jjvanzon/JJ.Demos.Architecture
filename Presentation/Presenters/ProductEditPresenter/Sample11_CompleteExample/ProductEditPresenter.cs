@@ -1,18 +1,13 @@
-﻿using JJ.Demos.Architecture.Business.Services;
-using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample9_RealisticExample;
+﻿using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample9_RealisticExample;
 
 namespace JJ.Demos.Architecture.Presentation.Presenters.ProductEditPresenter.Sample11_CompleteExample;
 
 public class ProductEditPresenter
 {
     private IProductRepository _repository;
-    private readonly IDateTimeProvider _dateTimeProvider;
 
-    public ProductEditPresenter(IProductRepository repository, IDateTimeProvider dateTimeProvider)
-    {
-        _repository = repository;
-        _dateTimeProvider = dateTimeProvider;
-    }
+    public ProductEditPresenter(IProductRepository repository) 
+        => _repository = repository;
 
     public object Save(ProductEditViewModel userInput)
     {
@@ -26,7 +21,7 @@ public class ProductEditPresenter
         IValidator validator = new ProductValidator(entity);
         if (validator.IsValid)
         {
-            new SideEffect_SetDateModified(entity, _dateTimeProvider).Execute();
+            new SideEffect_SetDateModified(entity).Execute();
 
             // Save
             _repository.Commit();

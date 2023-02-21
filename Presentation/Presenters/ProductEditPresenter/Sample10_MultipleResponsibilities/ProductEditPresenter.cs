@@ -1,20 +1,13 @@
-﻿using JJ.Demos.Architecture.Business.Services;
-using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample9_RealisticExample;
+﻿using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample9_RealisticExample;
 
 namespace JJ.Demos.Architecture.Presentation.Presenters.ProductEditPresenter.Sample10_MultipleResponsibilities;
 
 class ProductEditPresenter
 {
     private IProductRepository _repository;
-    private IDateTimeProvider _dateTimeProvider;
 
-    public ProductEditPresenter(
-        IProductRepository repository, 
-        IDateTimeProvider dateTimeProvider)
-    {
-        _dateTimeProvider = dateTimeProvider;
-        _repository = repository;
-    }
+    public ProductEditPresenter(IProductRepository repository)
+        => _repository = repository;
 
     /// <summary>
     /// An action method with multiple responsibilities.
@@ -25,7 +18,7 @@ class ProductEditPresenter
         Product entity = userInput.ToEntity(_repository);
 
         // Business
-        new SideEffect_SetDateModified(entity, _dateTimeProvider).Execute();
+        new SideEffect_SetDateModified(entity).Execute();
 
         // Save
         _repository.Commit();

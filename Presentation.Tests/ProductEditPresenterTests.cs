@@ -1,4 +1,4 @@
-﻿using JJ.Demos.Architecture.Business.Services;
+﻿using JJ.Demos.Architecture.Business.SideEffects;
 using JJ.Demos.Architecture.Data.RepositoryInterfaces;
 using JJ.Demos.Architecture.Presentation.Presenters.ProductEditPresenter.Sample11_CompleteExample;
 using JJ.Demos.Architecture.Presentation.ViewModels.Items.ProductViewModels.Sample6_RealisticExample;
@@ -15,9 +15,8 @@ public class ProductEditPresenterTests
         // Arrange
         IContext context = ContextFactory.CreateContextFromConfiguration();
         IProductRepository repository = RepositoryFactory.CreateRepositoryFromConfiguration<IProductRepository>(context);
-        IDateTimeProvider dateTimeProvider = new FixedDateTimeProvider(DateTime.UtcNow);;
 
-        ProductEditPresenter presenter = new(repository, dateTimeProvider);
+        ProductEditPresenter presenter = new(repository);
         ProductEditViewModel userInput = new()
         {
             Product = new ProductViewModel
@@ -37,11 +36,11 @@ public class ProductEditPresenterTests
         Assert.IsType<ProductListViewModel>(viewModelObject);
         Product product = repository.TryGet(userInput.Product.ID);
         Assert.NotNull(product);
-        Assert.Equal(userInput.Product.ProductNumber,product.ProductNumber);
+        Assert.Equal(userInput.Product.ProductNumber, product.ProductNumber);
         Assert.Equal(userInput.Product.Name, product.Name);
         Assert.Equal(userInput.Product.Description, product.Description);
         Assert.Equal(userInput.Product.Price, product.PriceWithoutVat);
-        Assert.Equal(dateTimeProvider.UtcNow.Date, product.DateModified);
+        Assert.Equal(SideEffect_SetDateModified.FixedDateTime.Date, product.DateModified);
     }
 
     [Fact]
@@ -50,9 +49,8 @@ public class ProductEditPresenterTests
         // Arrange
         IContext context = ContextFactory.CreateContextFromConfiguration();
         IProductRepository repository = RepositoryFactory.CreateRepositoryFromConfiguration<IProductRepository>(context);
-        IDateTimeProvider dateTimeProvider = new FixedDateTimeProvider(DateTime.UtcNow); ;
 
-        ProductEditPresenter presenter = new(repository, dateTimeProvider);
+        ProductEditPresenter presenter = new(repository);
         ProductEditViewModel userInput = new()
         {
             Product = new ProductViewModel
