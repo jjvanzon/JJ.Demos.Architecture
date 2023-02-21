@@ -16,6 +16,9 @@ class ProductEditPresenter
         _repository = repository;
     }
 
+    /// <summary>
+    /// An action method with multiple responsibilities.
+    /// </summary>
     public ProductEditViewModel Save(ProductEditViewModel userInput)
     {
         // ToEntity
