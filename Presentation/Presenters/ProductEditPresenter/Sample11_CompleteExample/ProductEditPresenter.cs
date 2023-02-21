@@ -2,7 +2,7 @@
 
 namespace JJ.Demos.Architecture.Presentation.Presenters.ProductEditPresenter.Sample11_CompleteExample;
 
-public class ProductEditPresenter
+class ProductEditPresenter
 {
     private IProductRepository _repository;
 

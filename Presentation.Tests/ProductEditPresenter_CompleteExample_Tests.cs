@@ -1,16 +1,13 @@
-﻿using JJ.Demos.Architecture.Business.SideEffects;
-using JJ.Demos.Architecture.Data.RepositoryInterfaces;
-using JJ.Demos.Architecture.Presentation.Presenters.ProductEditPresenter.Sample11_CompleteExample;
+﻿using JJ.Demos.Architecture.Presentation.Presenters.ProductEditPresenter.Sample11_CompleteExample;
 using JJ.Demos.Architecture.Presentation.ViewModels.Items.ProductViewModels.Sample6_RealisticExample;
 using JJ.Demos.Architecture.Presentation.ViewModels.Screens.ProductEditViewModels.Sample9_RealisticExample;
-using JJ.Framework.Data;
 
 namespace JJ.Demos.Architecture.Presentation.Tests;
 
-public class ProductEditPresenterTests
+public class ProductEditPresenter_CompleteExample_Tests
 {
     [Fact]
-    public void Test_ProductEditPresenter_Save_Valid()
+    public void Test_ProductEditPresenter_CompleteExample_Save_ValidationSuccessful()
     {
         // Arrange
         IContext context = ContextFactory.CreateContextFromConfiguration();
@@ -34,8 +31,10 @@ public class ProductEditPresenterTests
 
         // Assert
         Assert.IsType<ProductListViewModel>(viewModelObject);
+
         Product product = repository.TryGet(userInput.Product.ID);
         Assert.NotNull(product);
+
         Assert.Equal(userInput.Product.ProductNumber, product.ProductNumber);
         Assert.Equal(userInput.Product.Name, product.Name);
         Assert.Equal(userInput.Product.Description, product.Description);
@@ -44,7 +43,7 @@ public class ProductEditPresenterTests
     }
 
     [Fact]
-    public void Test_ProductEditPresenter_Save_ValidationFailed()
+    public void Test_ProductEditPresenter_CompleteExample_Save_ValidationFailed()
     {
         // Arrange
         IContext context = ContextFactory.CreateContextFromConfiguration();
@@ -67,11 +66,13 @@ public class ProductEditPresenterTests
         // Assert
         Assert.IsType<ProductEditViewModel>(viewModelObject);
         var viewModel = (ProductEditViewModel)viewModelObject;
-        Assert.Equal(viewModel.Product.ID, userInput.Product.ID);
-        Assert.Equal(viewModel.Product.ProductNumber, userInput.Product.ProductNumber);
-        Assert.Equal(viewModel.Product.Name, userInput.Product.Name);
-        Assert.Equal(viewModel.Product.Description, userInput.Product.Description);
-        Assert.Equal(viewModel.Product.Price, userInput.Product.Price);
+
+        Assert.Equal(userInput.Product.ID, viewModel.Product.ID);
+        Assert.Equal(userInput.Product.ProductNumber, viewModel.Product.ProductNumber);
+        Assert.Equal(userInput.Product.Name, viewModel.Product.Name);
+        Assert.Equal(userInput.Product.Description, viewModel.Product.Description);
+        Assert.Equal(userInput.Product.Price, viewModel.Product.Price);
+
         Assert.NotNull(viewModel.Validation);
         Assert.NotNull(viewModel.Validation.Messages);
         Assert.True(viewModel.Validation.Messages.Any());
