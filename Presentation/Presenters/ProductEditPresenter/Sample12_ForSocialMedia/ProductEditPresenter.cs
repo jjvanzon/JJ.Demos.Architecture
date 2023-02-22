@@ -13,12 +13,8 @@ public class ProductEditPresenter
 
         // Business Logic
         IValidator validator = new ProductValidator(entity);
-        if (validator.IsValid)
         {
             new SideEffect_SetDateModified(entity).Execute();
-
-            // Redirect
-            return new ProductListViewModel();
         }
 
         // ToViewModel
