@@ -17,14 +17,14 @@ class ProductEditPresenter
         // ToEntity
         Product entity = userInput.ToEntity(_repository);
 
-        // Business
+        // Business Logic
         new SideEffect_SetDateModified(entity).Execute();
 
         // Save
         _repository.Commit();
 
         // ToViewModel
-        ProductEditViewModel viewModel = entity.ToEditViewModel();
+        var viewModel = entity.ToEditViewModel();
         return viewModel;
     }
 }
