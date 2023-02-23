@@ -13,15 +13,13 @@ public class ProductEditPresenter
 
         // Business Logic
         IValidator validator = new ProductValidator(entity);
+        if (validator.IsValid)
         {
             new SideEffect_SetDateModified(entity).Execute();
         }
 
         // ToViewModel
         var viewModel = entity.ToEditViewModel();
-
-        // Non-Persisted Data  
-        viewModel.Validation.Messages = validator.Messages;
 
         return viewModel;
     }
