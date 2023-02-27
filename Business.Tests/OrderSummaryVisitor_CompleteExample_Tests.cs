@@ -2,10 +2,10 @@ using JJ.Demos.Architecture.Business.Visitors.OrderSummaryVisitors.Sample5_Compl
 
 namespace JJ.Demos.Architecture.Business.Tests;
 
-public class OrderSummaryVisitorTests
+public class OrderSummaryVisitor_CompleteExample_Tests
 {
     [Fact]
-    public void Test_SpecializedVisitor()
+    public void Test_OrderSummaryVisitor_CompleteExample()
     {
         var visitor = new OrderSummaryVisitor();
 
