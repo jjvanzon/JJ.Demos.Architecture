@@ -4,12 +4,12 @@ public class DiscountAssigner
 {
     void AssignDiscounts(Order order)
     {
-        var collection =
+        var selection =
             order.OrderLines
                  .Where(x => x.Product.Price >= 10)
                  .Where(x => x.Product.Price <= 100);
 
-        foreach (OrderLine orderLine in collection)
+        foreach (OrderLine orderLine in selection)
         {
             orderLine.DiscountPercentage = 10;
         }
