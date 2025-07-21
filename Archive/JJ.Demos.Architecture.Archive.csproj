@@ -6,4 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="2023-01-26 Address.cs" />
+    <Compile Remove="2023-01-26 IAddressRepository.cs" />
+    <Compile Remove="2023-01-28 SimpleVisitor.cs" />
+    <Compile Remove="2023-03-10 OrderExtensions.cs" />
+    <Compile Remove="Outtakes.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="2023-01-26 Address.cs" />
+    <None Include="2023-01-26 IAddressRepository.cs" />
+    <None Include="2023-01-28 SimpleVisitor.cs" />
+    <None Include="2023-03-10 OrderExtensions.cs" />
+    <None Include="Outtakes.cs" />
+  </ItemGroup>
+
 </Project>

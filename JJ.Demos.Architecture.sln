@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		LICENSE.TXT = LICENSE.TXT
+		NuGet.config = NuGet.config
 		Archive\Outtakes.cs = Archive\Outtakes.cs
 		README.md = README.md
 	EndProjectSection
@@ -26,6 +27,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JJ.Demos.Architecture.Data.Memory", "Data.Memory\JJ.Demos.Architecture.Data.Memory.csproj", "{B0E4F57E-740F-4A0B-A36B-9AB0B99B2F93}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Demos.Architecture.Data.NHibernate", "Data.NHibernate\JJ.Demos.Architecture.Data.NHibernate.csproj", "{2E910206-012A-4FC2-85C4-E907E3548A2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJ.Demos.Architecture.Other", "Other\JJ.Demos.Architecture.Other.csproj", "{B82D9A36-E9E2-2D34-98F2-67835FE1453C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +66,10 @@ Global
 		{2E910206-012A-4FC2-85C4-E907E3548A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E910206-012A-4FC2-85C4-E907E3548A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E910206-012A-4FC2-85C4-E907E3548A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B82D9A36-E9E2-2D34-98F2-67835FE1453C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82D9A36-E9E2-2D34-98F2-67835FE1453C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82D9A36-E9E2-2D34-98F2-67835FE1453C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82D9A36-E9E2-2D34-98F2-67835FE1453C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
