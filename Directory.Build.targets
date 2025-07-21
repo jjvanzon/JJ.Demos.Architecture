@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Disabled Warnings -->
+    <NoWarn>$(NoWarn);NU1605</NoWarn> <!--Detected package downgrade-->
+  </PropertyGroup>
+</Project>

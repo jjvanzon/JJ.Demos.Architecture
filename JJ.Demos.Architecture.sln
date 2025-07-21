@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{95E01F7B-C371-4DAA-A33E-B87CA8680A90}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		Directory.Build.targets = Directory.Build.targets
 		LICENSE.TXT = LICENSE.TXT
 		NuGet.config = NuGet.config
 		Archive\Outtakes.cs = Archive\Outtakes.cs

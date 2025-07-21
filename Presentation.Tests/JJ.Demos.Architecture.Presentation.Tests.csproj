@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JJ.Framework.Configuration" Version="1.7.7817.43035" />
+    <PackageReference Include="JJ.Framework.Configuration.Legacy" Version="0.250.4205" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
     <PackageReference Include="xunit" Version="2.4.2" />

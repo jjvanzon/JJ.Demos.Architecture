@@ -1,8 +1,13 @@
 ﻿// ReSharper disable ArrangeTypeModifiers
 
+// ReSharper disable UnusedParameter.Local
+// ReSharper disable ArrangeTypeMemberModifiers
+// ReSharper disable UnusedType.Local
+// ReSharper disable MemberCanBeProtected.Local
+// ReSharper disable InvalidXmlDocComment
 namespace JJ.Demos.Architecture.Other.DocOnlyMembers;
 
-class DocOnlyMembers_Example_WithoutDocComment
+class WithoutDocComment
 {
     // Without Doc Comment
 
@@ -13,7 +18,7 @@ class DocOnlyMembers_Example_WithoutDocComment
     }
  }
 
-class DocOnlyMembers_Example_WithDocComment
+class WithDocComment
 {
     // With Doc Comment
 
@@ -35,7 +40,7 @@ class DocOnlyMembers_Example_WithDocComment
     }
 }
 
-class DocOnlyMembers_Example_CrowdedWithComments
+class CrowdedWithComments
 {
     /// <summary>
     /// Returns the left part of a string.
@@ -48,7 +53,8 @@ class DocOnlyMembers_Example_CrowdedWithComments
     }
 
     /// <summary>
-    /// Takes the part of a string until the specified delimiter. Excludes the delimiter itself.
+    /// Takes the part of a string until the specified delimiter.
+    /// Excludes the delimiter itself.
     /// </summary>
     string TakeStartUntil(string input, string until)
     {
@@ -60,21 +66,75 @@ class DocOnlyMembers_Example_CrowdedWithComments
     }
 
     /// <summary>
-    /// Takes the part of a string until the specified delimiter. Excludes the delimiter itself.
+    /// Takes the part of a string until the specified delimiter.
+    /// Excludes the delimiter itself.
     /// </summary>
-    string TakeStartUntil(string input, char until) 
-        => TakeStartUntil(input, until.ToString());
+    string TakeStartUntil(string input, char until)
+    {
+        return TakeStartUntil(input, until.ToString());
+    }
 }
 
-interface DocOnlyMembers_Example_RepeatedDocComment
+interface RepeatedDocComment
 {
     /// <summary>
-    /// Takes the part of a string until the specified delimiter. Excludes the delimiter itself.
+    /// Takes the part of a string until the specified delimiter.
+    /// Excludes the delimiter itself.
     /// </summary>
     string TakeStartUntil(string input, string until);
 
     /// <summary>
-    /// Takes the part of a string until the specified delimiter. Excludes the delimiter itself.
+    /// Takes the part of a string until the specified delimiter.
+    /// Excludes the delimiter itself.
     /// </summary>
     string TakeStartUntil(string input, char until);
+}
+
+class InheritDocWithInheritance
+{
+    /// <inheritdoc />
+    class Rectangle : Element
+    {
+        /// <inheritdoc />
+        Rectangle(Element parent) : base(parent) { }
+    }
+
+    /// <summary>
+    /// VectorGraphics element that can contain
+    /// VectorGraphics child elements.
+    /// </summary>
+    class Element
+    {
+        /// <summary>
+        /// VectorGraphics element that can contain
+        /// VectorGraphics child elements.
+        /// </summary>
+        /// <param name="parent">
+        /// When in doubt, use Diagram.Background.
+        /// </param>
+        public Element(Element parent) { }
+    }
+}
+
+class InheritDocConstructorToType
+{
+    /// <inheritdoc />
+    class Rectangle : Element
+    {
+        /// <inheritdoc />
+        Rectangle(Element parent) : base(parent) { }
+    }
+
+    /// <summary>
+    /// VectorGraphics element that can contain
+    /// VectorGraphics child elements.
+    /// </summary>
+    /// <param name="parent">
+    /// When in doubt, use Diagram.Background.
+    /// </param>
+    class Element
+    {
+        /// <inheritdoc cref="Element" />
+        public Element(Element parent) { }
+    }
 }
