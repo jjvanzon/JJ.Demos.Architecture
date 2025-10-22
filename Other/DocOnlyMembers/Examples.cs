@@ -1,16 +1,14 @@
 ﻿// ReSharper disable ArrangeTypeModifiers
-
 // ReSharper disable UnusedParameter.Local
 // ReSharper disable ArrangeTypeMemberModifiers
 // ReSharper disable UnusedType.Local
 // ReSharper disable MemberCanBeProtected.Local
 // ReSharper disable InvalidXmlDocComment
+
 namespace JJ.Demos.Architecture.Other.DocOnlyMembers;
 
 class WithoutDocComment
 {
-    // Without Doc Comment
-
     string StartWithCap(string input)
     {
         if (input.Length == 0) return input;
@@ -20,8 +18,6 @@ class WithoutDocComment
 
 class WithDocComment
 {
-    // With Doc Comment
-
     /// <summary>
     /// Changes the first character to upper case:
     /// <code>
@@ -40,7 +36,7 @@ class WithDocComment
     }
 }
 
-class CrowdedWithComments
+class CrowdedComments
 {
     /// <summary>
     /// Returns the left part of a string.
@@ -75,7 +71,7 @@ class CrowdedWithComments
     }
 }
 
-interface RepeatedDocComment
+interface RepeatedComments
 {
     /// <summary>
     /// Takes the part of a string until the specified delimiter.
@@ -116,7 +112,7 @@ class InheritDocWithInheritance
     }
 }
 
-class InheritDocConstructorToType
+class InheritDocInConstructor
 {
     /// <inheritdoc />
     class Rectangle : Element
