@@ -1,12 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33110.190
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11626.88 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{95E01F7B-C371-4DAA-A33E-B87CA8680A90}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		Directory.Build.targets = Directory.Build.targets
+		JJ.Demos.Architecture.v3.ncrunchsolution = JJ.Demos.Architecture.v3.ncrunchsolution
 		LICENSE.TXT = LICENSE.TXT
 		NuGet.config = NuGet.config
 		Archive\Outtakes.cs = Archive\Outtakes.cs
