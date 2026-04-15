@@ -173,18 +173,20 @@ public class MissingDoc
 
 class Bewilder_BeforeCref
 {
-    /// <inheritdoc cref="Merge{TKey}(Dictionary{TKey, IValidator}, Dictionary{TKey, IValidator})" />
+    /// <inheritdoc cref="Merge{TKey}(Dictionary{TKey,IValidator},Dictionary{TKey,IValidator})" />
     Dictionary<TKey, ValidatorBase<T>> Merge<TKey, T>(
         Dictionary<TKey, ValidatorBase<T>> first, 
         Dictionary<TKey, ValidatorBase<T>> second)
         where TKey : notnull
     {
+        #region
         var result = new Dictionary<TKey, ValidatorBase<T>>(first);
         foreach (var entry in second)
         {
             result[entry.Key] = entry.Value;
         }
         return result;
+        #endregion
     }
 
     /// <summary>
@@ -196,12 +198,14 @@ class Bewilder_BeforeCref
         Dictionary<TKey, IValidator> second)
         where TKey : notnull
     {
+        #region
         var result = new Dictionary<TKey, IValidator>(first);
         foreach (var entry in second)
         {
             result[entry.Key] = entry.Value;
         }
         return result;
+        #endregion
     }
 }
 
@@ -213,12 +217,14 @@ class Bewilder_AfterDocOnlyMembers
         Dictionary<TKey, ValidatorBase<T>> second)
         where TKey : notnull
     {
+        #region
         var result = new Dictionary<TKey, ValidatorBase<T>>(first);
         foreach (var entry in second)
         {
             result[entry.Key] = entry.Value;
         }
         return result;
+        #endregion
     }
 
     /// <inheritdoc cref="_merge" />
@@ -227,12 +233,14 @@ class Bewilder_AfterDocOnlyMembers
         Dictionary<TKey, IValidator> second)
         where TKey : notnull
     {
+        #region
         var result = new Dictionary<TKey, IValidator>(first);
         foreach (var entry in second)
         {
             result[entry.Key] = entry.Value;
         }
         return result;
+        #endregion
     }
 }
 
