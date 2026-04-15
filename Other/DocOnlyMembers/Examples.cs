@@ -164,12 +164,15 @@ class NamingStyle
     int MyProp { get; }
 }
 
+// Errors out on purpose, but this is not nice for the CI.
+/*
 public class MissingDoc
 {
     public void MyMethod()
     {
     }
 }
+*/
 
 class Bewilder_BeforeCref
 {
@@ -230,6 +233,41 @@ class Bewilder_AfterDocOnlyMembers
     /// <inheritdoc cref="_merge" />
     Dictionary<TKey, IValidator> Merge<TKey>(
         Dictionary<TKey, IValidator> first, 
+        Dictionary<TKey, IValidator> second)
+        where TKey : notnull
+    {
+        #region
+        var result = new Dictionary<TKey, IValidator>(first);
+        foreach (var entry in second)
+        {
+            result[entry.Key] = entry.Value;
+        }
+        return result;
+        #endregion
+    }
+}
+
+class XmlFileDocs
+{
+    /// <include file='MergeDocs.xml' path='docs/member[@name="Merge"]/*' />
+    Dictionary<TKey, ValidatorBase<T>> Merge<TKey, T>(
+        Dictionary<TKey, ValidatorBase<T>> first,
+        Dictionary<TKey, ValidatorBase<T>> second)
+        where TKey : notnull
+    {
+        #region
+        var result = new Dictionary<TKey, ValidatorBase<T>>(first);
+        foreach (var entry in second)
+        {
+            result[entry.Key] = entry.Value;
+        }
+        return result;
+        #endregion
+    }
+
+    /// <include file='MergeDocs.xml' path='docs/member[@name="Merge"]/*' />
+    Dictionary<TKey, IValidator> Merge<TKey>(
+        Dictionary<TKey, IValidator> first,
         Dictionary<TKey, IValidator> second)
         where TKey : notnull
     {
