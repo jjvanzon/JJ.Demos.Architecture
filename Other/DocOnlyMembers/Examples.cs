@@ -1,5 +1,6 @@
 ﻿#pragma warning disable CS1572 // XML comment has a param tag, but there is no parameter by that name
 #pragma warning disable IDE0060 // Unused parameter
+#pragma warning disable IDE0130 // Namespace != folder
 // ReSharper disable ArrangeTypeModifiers
 // ReSharper disable UnusedParameter.Local
 // ReSharper disable ArrangeTypeMemberModifiers
@@ -7,6 +8,8 @@
 // ReSharper disable MemberCanBeProtected.Local
 // ReSharper disable InvalidXmlDocComment
 // ReSharper disable UnassignedGetOnlyAutoProperty
+// ReSharper disable ClassNeverInstantiated.Global
+// ReSharper disable UnusedMember.Local
 
 namespace JJ.Demos.Architecture;
 
@@ -247,40 +250,11 @@ class Bewilder_AfterDocOnlyMembers
     }
 }
 
-class XmlFileDocs
-{
-    /// <include file='MergeDocs.xml' path='docs/member[@name="Merge"]/*' />
-    Dictionary<TKey, ValidatorBase<T>> Merge<TKey, T>(
-        Dictionary<TKey, ValidatorBase<T>> first,
-        Dictionary<TKey, ValidatorBase<T>> second)
-        where TKey : notnull
-    {
-        #region
-        var result = new Dictionary<TKey, ValidatorBase<T>>(first);
-        foreach (var entry in second)
-        {
-            result[entry.Key] = entry.Value;
-        }
-        return result;
-        #endregion
-    }
-
-    /// <include file='MergeDocs.xml' path='docs/member[@name="Merge"]/*' />
-    Dictionary<TKey, IValidator> Merge<TKey>(
-        Dictionary<TKey, IValidator> first,
-        Dictionary<TKey, IValidator> second)
-        where TKey : notnull
-    {
-        #region
-        var result = new Dictionary<TKey, IValidator>(first);
-        foreach (var entry in second)
-        {
-            result[entry.Key] = entry.Value;
-        }
-        return result;
-        #endregion
-    }
-}
-
 interface IValidator;
 class ValidatorBase<T> : IValidator;
+
+class XmlFileDocs
+{
+    /// <include file='docs.xml' path='docs/member[@name="Shout"]/*' />
+    public string Shout(string input) => input.ToUpper() + "!";
+}

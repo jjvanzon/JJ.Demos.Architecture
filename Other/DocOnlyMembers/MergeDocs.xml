@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<docs>
-    <member name="Merge">
-        <summary>
-            Merges two collections into one.
-            When collections are empty, an empty collection is returned.
-        </summary>
-    </member>
-</docs>
