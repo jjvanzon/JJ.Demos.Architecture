@@ -169,4 +169,55 @@ public class MissingDoc
     public void MyMethod()
     {
     }
-}  
+}
+
+class Bewilder_BeforeCref
+{
+    /// <inheritdoc cref="Merge{T}(Dictionary{string, IValidator{T}}, Dictionary{string, IValidator{T}})" />
+    List<string> Merge(List<string> first, List<string> second)
+    {
+        var result = new List<string>(first);
+        result.AddRange(second);
+        return result;
+    }
+
+    /// <summary>
+    /// Merges two collections into one.
+    /// When collections are empty, an empty collection is returned.
+    /// </summary>
+    Dictionary<string, IValidator<T>> Merge<T>(
+        Dictionary<string, IValidator<T>> first, 
+        Dictionary<string, IValidator<T>> second)
+    {
+        var result = new Dictionary<string, IValidator<T>>(first);
+        foreach (KeyValuePair<string, IValidator<T>> entry in second)
+        {
+            result[entry.Key] = entry.Value;
+        }
+        return result;
+    }
+}
+
+class Bewilder_AfterDocOnlyMembers
+{
+    /// <inheritdoc cref="_merge" />
+    List<string> Merge(List<string> first, List<string> second)
+    {
+        var result = new List<string>(first);
+        result.AddRange(second);
+        return result;
+    }
+
+    /// <inheritdoc cref="_merge" />
+    Dictionary<string, IValidator<T>> Merge<T>(Dictionary<string, IValidator<T>> first, Dictionary<string, IValidator<T>> second)
+    {
+        var result = new Dictionary<string, IValidator<T>>(first);
+        foreach (var entry in second)
+        {
+            result[entry.Key] = entry.Value;
+        }
+        return result;
+    }
+}
+
+interface IValidator<T>;
