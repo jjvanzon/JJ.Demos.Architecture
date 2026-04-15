@@ -1,11 +1,16 @@
-﻿// ReSharper disable ArrangeTypeModifiers
+﻿#pragma warning disable CS1572 // XML comment has a param tag, but there is no parameter by that name
+#pragma warning disable IDE0060 // Unused parameter
+// ReSharper disable ArrangeTypeModifiers
 // ReSharper disable UnusedParameter.Local
 // ReSharper disable ArrangeTypeMemberModifiers
 // ReSharper disable UnusedType.Local
 // ReSharper disable MemberCanBeProtected.Local
 // ReSharper disable InvalidXmlDocComment
+// ReSharper disable UnassignedGetOnlyAutoProperty
 
-namespace JJ.Demos.Architecture.Other.DocOnlyMembers;
+namespace JJ.Demos.Architecture;
+
+using docs;
 
 class WithoutDocComment
 {
@@ -134,3 +139,34 @@ class InheritDocInConstructor
         public Element(Element parent) { }
     }
 }
+
+class ReferencesDocsCs
+{
+    /// <inheritdoc cref="_element" />
+    class Rectangle : Element
+    {
+        /// <inheritdoc cref="_element" />
+        Rectangle(Element parent) : base(parent) { }
+    }
+
+    /// <inheritdoc cref="_element" />
+    class Element
+    {
+        /// <inheritdoc cref="_element" />
+        public Element(Element parent) { }
+    }
+}
+
+
+class NamingStyle
+{
+    /// <inheritdoc cref="_myprop" />
+    int MyProp { get; }
+}
+
+public class MissingDoc
+{
+    public void MyMethod()
+    {
+    }
+}  
