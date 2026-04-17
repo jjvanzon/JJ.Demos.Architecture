@@ -9,6 +9,8 @@
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <!--<WarningsAsErrors>$(WarningsAsErrors);CS1591</WarningsAsErrors>--> <!-- missing docs as errors-->
     <!--<NoWarn>$(NoWarn);CS1591</NoWarn>--> <!--Missing doc lenience-->
+    <WarningsAsErrors>$(WarningsAsErrors);CS1573</WarningsAsErrors> <!-- missing param tag-->
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<docs>
+  <member name="Shout">
+    <summary>
+      Converts the text to upper case and appends an exclamation mark.
+    </summary>
+    <param name="input">The text to shout.</param>
+    <returns>The shouted text.</returns>
+  </member>
+</docs>

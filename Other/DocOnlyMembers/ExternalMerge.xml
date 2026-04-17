@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc>
+    <members>
+        <member name="M:JJ.Demos.Architecture.ExternalMerge.Merge``2(System.Collections.Generic.Dictionary{``0,JJ.Demos.Architecture.ValidatorBase{``1}},System.Collections.Generic.Dictionary{``0,JJ.Demos.Architecture.ValidatorBase{``1}})">
+            <summary>
+                Merges two collections into one.
+                When collections are empty, an empty collection is returned.
+            </summary>
+        </member>
+    </members>
+</doc>

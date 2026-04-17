@@ -1,6 +1,7 @@
 ﻿#pragma warning disable CS1572 // XML comment has a param tag, but there is no parameter by that name
 #pragma warning disable IDE0060 // Unused parameter
 #pragma warning disable IDE0130 // Namespace != folder
+// ReSharper disable UnusedType.Global
 // ReSharper disable ArrangeTypeModifiers
 // ReSharper disable UnusedParameter.Local
 // ReSharper disable ArrangeTypeMemberModifiers
@@ -258,3 +259,78 @@ class XmlFileDocs
     /// <include file='docs.xml' path='docs/member[@name="Shout"]/*' />
     public string Shout(string input) => input.ToUpper() + "!";
 }
+
+class XmlCompilerFormatDocs
+{
+    /// <include file='ExternalShout.xml' path='doc/members/member[@name="M:JJ.Demos.Architecture.ExternalShout.Shout(System.String)"]/*' />
+    string Shout(string input) => input.ToUpper() + "!";
+}
+
+class XmlCompilerFormatGenericDocs
+{
+    /// <include file='ExternalMerge.xml' path='doc/members/member[@name="M:JJ.Demos.Architecture.ExternalMerge.Merge``2(System.Collections.Generic.Dictionary{``0,JJ.Demos.Architecture.ValidatorBase{``1}},System.Collections.Generic.Dictionary{``0,JJ.Demos.Architecture.ValidatorBase{``1}})"]/*' />
+    Dictionary<TKey, ValidatorBase<T>> Merge<TKey, T>(
+        Dictionary<TKey, ValidatorBase<T>> first,
+        Dictionary<TKey, ValidatorBase<T>> second)
+        where TKey : notnull
+    {
+        #region
+        var result = new Dictionary<TKey, ValidatorBase<T>>(first);
+        foreach (var entry in second)
+            result[entry.Key] = entry.Value;
+        return result;
+        #endregion
+    }
+}
+
+/// <summary>
+/// The legacy shall be respected!
+/// </summary>
+/// <inheritdoc cref="_mylegacyclass" />
+public class MyLegacyClass;
+
+#pragma warning disable CS1573 // Parameter has no matching param tag (intentional demonstration)
+/// <summary>
+/// Demonstrates CS1573 warning: missing param tag on public method.
+/// Intentionally has a &lt;param&gt; tag for a non-existent parameter,
+/// but missing one for the actual parameter to trigger CS1573.
+/// </summary>
+/// <param name="unused">This param is documented.</param>
+public class TriggerCs1573
+{
+    /// <summary>
+    /// Returns the input string as-is.
+    /// </summary>
+    /// <param name="other">The string to echo. This param exists but we won't document it for input parameter.</param>
+    public string MissingParamTag(string input) => input;
+}
+#pragma warning restore CS1573
+
+/// <summary>
+/// Shows that &lt;inheritdoc cref&gt; does NOT inherit &lt;param&gt; tags.
+/// Even though _missingparamtag has a &lt;param name="param1"&gt; tag,
+/// it's not inherited here. CS1573 won't trigger because the method
+/// has zero &lt;param&gt; tags (the compiler doesn't see "some but not all").
+/// </summary>
+public class MissingParamClass
+{
+    /// <inheritdoc cref="_missingparamtag" />
+    public void MissingParamTag(int param1, int param2) { }
+}
+
+#pragma warning disable CS1573 // Intentional: demonstrating include param inheritance
+/// <summary>
+/// Demonstrates that &lt;include&gt; can pull in parameter documentation from XML.
+/// </summary>
+public class XmlFileDocsMissingParam
+{
+    /// <summary>
+    /// Demonstrates that &lt;include&gt; DOES inherit and validate &lt;param&gt; tags.
+    /// The XML includes &lt;param name="input"&gt;, so extra parameter 'extra' is caught as CS1573.
+    /// This contrasts with &lt;inheritdoc cref&gt; which does NOT inherit param tags.
+    /// </summary>
+    /// <include file='docsmissingparam.xml' path='docs/member[@name="Shout"]/*' />
+    public string ShoutWithExtra(string input, string extra) => input.ToUpper() + "!";
+}
+#pragma warning restore CS1573
+
