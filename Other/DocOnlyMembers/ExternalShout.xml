@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <doc>
-    <members>
-        <member name="M:JJ.Demos.Architecture.ExternalShout.Shout(System.String)">
-            <summary>
-                Converts the text to upper case and appends an exclamation mark.
-            </summary>
-        </member>
-    </members>
+  <members>
+    <member name="M:JJ.Demos.Architecture.ExternalShout.Shout(System.String)">
+      <summary>
+        Converts the text to upper case and appends an exclamation mark.
+      </summary>
+    </member>
+  </members>
 </doc>
