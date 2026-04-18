@@ -19,3 +19,12 @@ class WithDocComment
         return input.Left(1).ToUpper() + input.CutLeft(1);
     }
 }
+
+class WithoutDocComment
+{
+    string StartWithCap(string input)
+    {
+        if (input.Length == 0) return input;
+        return input.Left(1).ToUpper() + input.CutLeft(1);
+    }
+ }

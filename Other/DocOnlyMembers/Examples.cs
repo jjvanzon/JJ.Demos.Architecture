@@ -1,6 +1,7 @@
 ﻿#pragma warning disable CS1572 // XML comment has a param tag, but there is no parameter by that name
 #pragma warning disable IDE0060 // Unused parameter
-#pragma warning disable IDE0130 // Namespace != folder
+// ReSharper disable UnusedTypeParameter
+// ReSharper disable UnusedParameter.Global
 // ReSharper disable UnusedType.Global
 // ReSharper disable ArrangeTypeModifiers
 // ReSharper disable UnusedParameter.Local
@@ -15,50 +16,6 @@
 namespace JJ.Demos.Architecture;
 
 using docs;
-
-class WithoutDocComment
-{
-    string StartWithCap(string input)
-    {
-        if (input.Length == 0) return input;
-        return input.Left(1).ToUpper() + input.CutLeft(1);
-    }
- }
-
-class CrowdedComments
-{
-    /// <summary>
-    /// Returns the left part of a string.
-    /// Can return less characters than the length provided if string is shorter.
-    /// </summary>
-    string TakeStart(string input, int length)
-    {
-        if (length > input.Length) length = input.Length;
-        return input.Left(length);
-    }
-
-    /// <summary>
-    /// Takes the part of a string until the specified delimiter.
-    /// Excludes the delimiter itself.
-    /// </summary>
-    string TakeStartUntil(string input, string until)
-    {
-        if (until == null) throw new ArgumentNullException(nameof(until));
-        int index = input.IndexOf(until, StringComparison.Ordinal);
-        if (index == -1) return "";
-        string output = input.Left(index);
-        return output;
-    }
-
-    /// <summary>
-    /// Takes the part of a string until the specified delimiter.
-    /// Excludes the delimiter itself.
-    /// </summary>
-    string TakeStartUntil(string input, char until)
-    {
-        return TakeStartUntil(input, until.ToString());
-    }
-}
 
 interface RepeatedComments
 {
