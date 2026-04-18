@@ -8,6 +8,8 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <NoWarn>$(NoWarn);IDE0130</NoWarn> <!--Namespace != folder-->
+    <NoWarn>$(NoWarn);IDE0051</NoWarn> <!--Unused member-->
+    <NoWarn>$(NoWarn);IDE0060</NoWarn> <!--Unused parameter-->
     <!--<WarningsAsErrors>$(WarningsAsErrors);CS1591</WarningsAsErrors>--> <!-- missing docs as errors-->
     <!--<NoWarn>$(NoWarn);CS1591</NoWarn>--> <!--Missing doc lenience-->
     <WarningsAsErrors>$(WarningsAsErrors);CS1573</WarningsAsErrors> <!-- missing param tag-->

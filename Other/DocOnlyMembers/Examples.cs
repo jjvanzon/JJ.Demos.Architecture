@@ -1,85 +1,11 @@
 ﻿#pragma warning disable CS1572 // XML comment has a param tag, but there is no parameter by that name
-#pragma warning disable IDE0060 // Unused parameter
 // ReSharper disable UnusedTypeParameter
-// ReSharper disable UnusedParameter.Global
-// ReSharper disable UnusedType.Global
-// ReSharper disable ArrangeTypeModifiers
-// ReSharper disable UnusedParameter.Local
-// ReSharper disable ArrangeTypeMemberModifiers
-// ReSharper disable UnusedType.Local
-// ReSharper disable MemberCanBeProtected.Local
 // ReSharper disable InvalidXmlDocComment
 // ReSharper disable UnassignedGetOnlyAutoProperty
-// ReSharper disable ClassNeverInstantiated.Global
-// ReSharper disable UnusedMember.Local
 
 namespace JJ.Demos.Architecture;
 
 using docs;
-
-interface RepeatedComments
-{
-    /// <summary>
-    /// Takes the part of a string until the specified delimiter.
-    /// Excludes the delimiter itself.
-    /// </summary>
-    string TakeStartUntil(string input, string until);
-
-    /// <summary>
-    /// Takes the part of a string until the specified delimiter.
-    /// Excludes the delimiter itself.
-    /// </summary>
-    string TakeStartUntil(string input, char until);
-}
-
-class InheritDocWithInheritance
-{
-    /// <inheritdoc />
-    class Rectangle : Element
-    {
-        /// <inheritdoc />
-        Rectangle(Element parent) : base(parent) { }
-    }
-
-    /// <summary>
-    /// VectorGraphics element that can contain
-    /// VectorGraphics child elements.
-    /// </summary>
-    class Element
-    {
-        /// <summary>
-        /// VectorGraphics element that can contain
-        /// VectorGraphics child elements.
-        /// </summary>
-        /// <param name="parent">
-        /// When in doubt, use Diagram.Background.
-        /// </param>
-        public Element(Element parent) { }
-    }
-}
-
-class InheritDocInConstructor
-{
-    /// <inheritdoc />
-    class Rectangle : Element
-    {
-        /// <inheritdoc />
-        Rectangle(Element parent) : base(parent) { }
-    }
-
-    /// <summary>
-    /// VectorGraphics element that can contain
-    /// VectorGraphics child elements.
-    /// </summary>
-    /// <param name="parent">
-    /// When in doubt, use Diagram.Background.
-    /// </param>
-    class Element
-    {
-        /// <inheritdoc cref="Element" />
-        public Element(Element parent) { }
-    }
-}
 
 class ReferencesDocsCs
 {

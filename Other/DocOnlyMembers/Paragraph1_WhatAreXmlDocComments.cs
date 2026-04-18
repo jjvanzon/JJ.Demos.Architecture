@@ -1,6 +1,4 @@
-﻿namespace JJ.Demos.Architecture;
-
-class WithDocComment
+﻿class WithDocComment
 {
     void MyCode()
     {
