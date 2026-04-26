@@ -2,16 +2,6 @@
 // ReSharper disable InvalidXmlDocComment
 // ReSharper disable UnassignedGetOnlyAutoProperty
 
-namespace JJ.Demos.Architecture;
-
-using docs;
-
-class NamingStyle
-{
-    /// <inheritdoc cref="_myprop" />
-    int MyProp { get; }
-}
-
 // Errors out on purpose, but this is not nice for the CI.
 /*
 public class MissingDoc

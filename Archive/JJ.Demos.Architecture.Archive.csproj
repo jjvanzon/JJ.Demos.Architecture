@@ -11,6 +11,7 @@
     <Compile Remove="2023-01-26 IAddressRepository.cs" />
     <Compile Remove="2023-01-28 SimpleVisitor.cs" />
     <Compile Remove="2023-03-10 OrderExtensions.cs" />
+    <Compile Remove="2026-04-26 UsingUsings %28DocOnlyMembers%29.cs" />
     <Compile Remove="Outtakes.cs" />
   </ItemGroup>
 
@@ -19,6 +20,7 @@
     <None Include="2023-01-26 IAddressRepository.cs" />
     <None Include="2023-01-28 SimpleVisitor.cs" />
     <None Include="2023-03-10 OrderExtensions.cs" />
+    <None Include="2026-04-26 UsingUsings (DocOnlyMembers).cs" />
     <None Include="Outtakes.cs" />
   </ItemGroup>
 
