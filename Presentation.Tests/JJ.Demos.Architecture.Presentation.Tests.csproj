@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="JJ.Framework.Configuration" Version="1.7.7798.35831" />
+    <PackageReference Include="JJ.Framework.Configuration.Core" Version="4.6.6256" />
     <PackageReference Include="MSTest" Version="3.7.3" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
     <PackageReference Include="xunit" Version="2.4.2" />
@@ -28,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="testhost.dll.config">
+    <None Update="app.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="xunit.runner.json">
