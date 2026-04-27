@@ -2,5 +2,7 @@
   <PropertyGroup>
     <!-- Disabled Warnings -->
     <NoWarn>$(NoWarn);NU1605</NoWarn> <!--Detected package downgrade-->
+    <NoWarn>$(NoWarn);NU1603</NoWarn> <!--Inexact version match (but still in range)-->
+    <NoWarn>$(NoWarn);NU1701</NoWarn> <!--.NET4x lib used in .NET5+ project-->
   </PropertyGroup>
 </Project>
